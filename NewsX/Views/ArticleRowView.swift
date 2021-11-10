@@ -14,11 +14,9 @@ struct ArticleRowView: View {
 	let article: Article
 	init(_ article: Article) { self.article = article }
 	
-	private let imageTransaction = Transaction(animation: .easeInOut)
-	
 	var body: some View {
 		VStack(alignment: .leading, spacing: 20) {
-			AsyncImage(url: article.imageURL, transaction: imageTransaction) { asyncImagePhase in
+			AsyncImage(url: article.imageURL, transaction: Constant.imageTransaction) { asyncImagePhase in
 				switch asyncImagePhase {
 					case .success(let image):
 						image
@@ -35,10 +33,11 @@ struct ArticleRowView: View {
 			.frame(minHeight: 200, maxHeight: 300)
 			.background(.regularMaterial)
 			.clipped()
-		}
 		
 		// Article text and description
 		VStack(alignment: .leading, spacing: 8) {
+			// Uncomment if needed for open article in Safari
+			// Link(article.title, destination: article.articleURL)
 			Text(article.title)
 				.font(.headline)
 				.lineLimit(2)
@@ -59,25 +58,40 @@ struct ArticleRowView: View {
 				sharingButton
 			}
 		}
-		.padding()
+		.padding([.horizontal, .bottom])
+		}
 	}
 }
 
 extension ArticleRowView {
 	private var bookmarkButton: some View {
 		Button {
-			print("Add to bookmark")
+			// Implement saving to bookmark's
 		} label: {
 			Image(systemName: "bookmark")
-				.buttonStyle(.bordered)
 		}
+		.buttonStyle(.bordered)
 	}
 	private var sharingButton: some View {
 		Button {
-			print("Share")
+			presentActionSheet(for: article.articleURL)
 		} label: {
 			Image(systemName: "square.and.arrow.up")
 		}
+		.buttonStyle(.bordered)
+
+	}
+	
+	/// Present share action sheet for SwiftUI
+	///
+	/// Call this method when `sharingButton` is tapped.
+	private func presentActionSheet(for url: URL) {
+		let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+		(UIApplication.shared.connectedScenes.first as? UIWindowScene)?
+			.keyWindow?
+			.rootViewController?
+			.present(activityVC, animated: true)
+		
 	}
 }
 

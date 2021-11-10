@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct NewsXApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	
+	var body: some Scene {
+		WindowGroup {
+			let data: [Article] = Article.previewData
+			ArticleListView(articles: data)
+		}
+	}
 }
