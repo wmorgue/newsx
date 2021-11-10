@@ -7,36 +7,27 @@
 
 import SwiftUI
 
+
 struct ArticleRowView: View {
+	
+	/// Article model
 	let article: Article
+	init(_ article: Article) { self.article = article }
+	
+	private let imageTransaction = Transaction(animation: .easeInOut)
 	
 	var body: some View {
 		VStack(alignment: .leading, spacing: 20) {
-			// TODO: Refactor to AsyncImageView()
-			AsyncImage(url: article.imageURL) { asyncImagePhase in
+			AsyncImage(url: article.imageURL, transaction: imageTransaction) { asyncImagePhase in
 				switch asyncImagePhase {
 					case .success(let image):
 						image
 							.resizable()
 							.aspectRatio(contentMode: .fill)
 					case .failure:
-						HStack {
-							Spacer()
-							VStack(spacing: 25) {
-								Image(systemName: "photo.on.rectangle")
-									.font(.title)
-									.imageScale(.large)
-								Text("Can't load the image.")
-									.foregroundColor(.gray)
-							}
-							Spacer()
-						}
+						FailureImageView()
 					case .empty:
-						HStack {
-							Spacer()
-							ProgressView()
-							Spacer()
-						}
+						EmptyImageView()
 					@unknown default:
 						EmptyView()
 				}
@@ -46,6 +37,7 @@ struct ArticleRowView: View {
 			.clipped()
 		}
 		
+		// Article text and description
 		VStack(alignment: .leading, spacing: 8) {
 			Text(article.title)
 				.font(.headline)
@@ -63,24 +55,29 @@ struct ArticleRowView: View {
 				
 				Spacer()
 				
-				// TODO: Refactor
-				Button {
-					print("Add to bookmark")
-				} label: {
-					Image(systemName: "bookmark")
-						.buttonStyle(.bordered)
-				}
-				
-				// TODO: Refactor
-				Button {
-					print("Share")
-				} label: {
-					Image(systemName: "square.and.arrow.up")
-				}
-				
+				bookmarkButton
+				sharingButton
 			}
 		}
 		.padding()
+	}
+}
+
+extension ArticleRowView {
+	private var bookmarkButton: some View {
+		Button {
+			print("Add to bookmark")
+		} label: {
+			Image(systemName: "bookmark")
+				.buttonStyle(.bordered)
+		}
+	}
+	private var sharingButton: some View {
+		Button {
+			print("Share")
+		} label: {
+			Image(systemName: "square.and.arrow.up")
+		}
 	}
 }
 
@@ -88,10 +85,8 @@ struct ArticleRowView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
 			List {
-				ArticleRowView(article: .previewData[0])
-					.listRowInsets(
-						.init(top: 0, leading: 0, bottom: 0, trailing: 0)
-					)
+				ArticleRowView(.previewData.first!)
+					.listRowInsets(Constant.listInsets)
 			}
 			.listStyle(.plain)
 		}

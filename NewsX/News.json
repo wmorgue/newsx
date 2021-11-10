@@ -1,266 +1,240 @@
 {
 	"status": "ok",
-	"totalResults": 15557,
+	"totalResults": 203,
 	"articles": [
 		{
 			"source": {
 				"id": null,
-				"name": "DIE WELT"
+				"name": "Vedomosti.ru"
+			},
+			"author": "Ведомости News",
+			"title": "Производитель электромобилей Rivian планирует привлечь в ходе IPO почти $12 млрд",
+			"description": "Американский производитель электромобилей Rivian провел первичное размещение акций по цене $78 за штуку, сообщили в пресс-службе компании. Это больше чем ожидалось ранее — 5 ноября ценовой диапазон предложения был повышен с $62 до $72-74 за бумагу.",
+			"url": "https://www.vedomosti.ru/business/news/2021/11/10/895149-rivian-povisil-tsenu-razmescheniya-do-78",
+			"urlToImage": "https://sharing.vedomosti.ru/1636530540/vedomosti.ru/business/news/2021/11/10/895149-rivian-povisil-tsenu-razmescheniya-do-78.jpg",
+			"publishedAt": "2021-11-10T07:49:00Z",
+			"content": "Rivian $78 , - . 5   $62 $72-74 . \r\nIPO, , 9 , Rivian 153 . ,  30-   22,95 IPO 20,25 .    Nasdaq , 10 , RIVN.\r\nRivian, Tesla, $11,9 . IPO 2011 ., Alibaba ($25 ), Facebook ( Meta, $16 ) General Motors… [+288 chars]"
+		},
+		{
+			"source": {
+				"id": null,
+				"name": "Habr.com"
+			},
+			"author": "BobcatKat",
+			"title": "Из-за падения акций Tesla Маск потерял за два дня $50 млрд",
+			"description": "Как сообщает Bloomberg, из-за падения акций Telsa на этой неделе глава компании Илон Маск потерял $50 млрд. Издание отмечает, что это самое большое двухдневное падение в истории Bloomberg Billionaires Index и самое большое однодневное падение со времён развод…",
+			"url": "https://habr.com/ru/news/t/588254/#post-content-body",
+			"urlToImage": "https://habrastorage.org/getpro/habr/upload_files/393/713/9f1/3937139f16e5f63fc3cde211943f4f46.jpeg",
+			"publishedAt": "2021-11-10T07:41:44Z",
+			"content": "Bloomberg, - Telsa $50 . , Bloomberg Billionaires Index 2019 . $2,1 - .\r\n, Tesla. 6    Twitter , , 10% . , , . . Bloomberg, , .\r\n7 CNBC, $15 Tesla. 2022 . $28 , . , Tesla , . , .\r\n8 , 30 88 . 36% Tes… [+168 chars]"
+		},
+		{
+			"source": {
+				"id": null,
+				"name": "Sputnik International"
+			},
+			"author": "Sputnik Türkiye",
+			"title": "Elon Musk'ın Twitter anketi pahalıya mal oldu",
+			"description": "Milyarder Elon Musk'ın hafta sonu Twitter'daki takipçilerine \"Tesla hisselerimin yüzde 10'unu satmalı mıyım?\" sorusunu sormasının ardından şirket, 50 milyar dolar kaybetti.",
+			"url": "https://tr.sputniknews.com/20211110/elon-muskin-twitter-anketi-pahaliya-mal-oldu-1050651031.html",
+			"urlToImage": "https://cdnntr1.img.sputniknews.com/images/sharing/article/tur/1050651031.jpg?10443580341636529790",
+			"publishedAt": "2021-11-10T07:36:29Z",
+			"content": "Much is made lately of unrealized gains being a means of tax avoidance, so I propose selling 10% of my Tesla stock.\r\nDo you support this?\r\n— Elon Musk (@elonmusk) November 6, 2021"
+		},
+		{
+			"source": {
+				"id": null,
+				"name": "Inpact-hardware.com"
+			},
+			"author": "David Legrand",
+			"title": "NVIDIA dévoile sa carte A2 low profile : enfin une remplaçante de la Tesla T4 ?",
+			"description": "Vous rêviez d'une nouvelle carte graphique pour serveur d'entrée de gamme, compacte mais basée sur l'architecture Ampere ? NVIDIA semble enf...",
+			"url": "https://www.inpact-hardware.com/article/2779/nvidia-devoile-sa-carte-a2-low-profile-enfin-remplacante-tesla-t4",
+			"urlToImage": "https://cdnx.inpact-hardware.com/data-prod/images/bd/wide-linked-media/2426.jpg",
+			"publishedAt": "2021-11-10T07:34:33Z",
+			"content": "Vous rêviez d'une nouvelle carte graphique pour serveur d'entrée de gamme, compacte mais basée sur l'architecture Ampere ? NVIDIA semble enfin vous avoir entendu et dévoile sa carte A2.Il y a quelque… [+1984 chars]"
+		},
+		{
+			"source": {
+				"id": null,
+				"name": "3dnews.ru"
 			},
 			"author": null,
-			"title": "Elon Musk trennt sich von zehn Prozent seiner Tesla-Aktien",
-			"description": "Tesla-Chef Elon Musk hat seine Twitter-Follower über den möglichen Verkauf von zehn Prozent seiner Aktien an dem US-Elektroautobauer abstimmen lassen. Der Multimilliardär hatte angekündigt, er werde sich an das Ergebnis des Votums halten – „wie auch immer es …",
-			"url": "https://www.welt.de/themen/personen/politiker/ausland/video234908644/Tesla-Elon-Musk-trennt-sich-nach-Twitter-Abstimmung-von-zehn-Prozent-seiner-Aktien.html",
-			"urlToImage": "https://img.welt.de/img/videos/mobile234908662/0421353247-ci16x9-w1200/FILE-PHOTO-Tesla-s-gigafactory-in-Gruenheide.jpg",
-			"publishedAt": "2021-11-08T08:04:48Z",
-			"content": "Die WELT als ePaper: Die vollständige Ausgabe steht Ihnen bereits am Vorabend zur Verfügung so sind Sie immer hochaktuell informiert. Weitere Informationen: http://epaper.welt.de \r\n Der Kurz-Link die… [+49 chars]"
+			"title": "Автопроизводители в этом десятилетии потратят $500 млрд на переход к выпуску электромобилей",
+			"description": "Многие ведущие автопроизводители мира уже взяли на себя обязательства перевести весомую часть реализуемых в 2030 году транспортных средств на электротягу. Для большинства из них такая миграция обойдётся в круглую сумму — затраты в целом по отрасли могут дости…",
+			"url": "https://3dnews.ru/1053382/avtoproizvoditeli-v-etom-desyatiletii-potratyat-500-mlrd-na-perehod-k-vipusku-elektromobiley",
+			"urlToImage": "https://3dnews.ru/assets/external/illustrations/2021/11/10/1053382/daimler_01.jpg",
+			"publishedAt": "2021-11-10T07:30:00Z",
+			"content": "2030 . — $515 .\r\n: Daimler\r\n, Reuters, $300 , , . , $515 .\r\n , , , . AlixPartners, 2025 $330 . , 2020 , $225 .\r\nTesla, $1,2 . , : Volkswagen, Toyota, Ford General Motors. 2030 . Volkswagen $110 2030 … [+100 chars]"
 		},
 		{
 			"source": {
 				"id": null,
-				"name": "Sapo.pt"
+				"name": "Www.hs.fi"
 			},
-			"author": "Pedro Simões",
-			"title": "Vender ou não vender? Elon Musk pergunta ao Twitter o que fazer com ações da Tesla",
-			"description": "Considerado um dos homens mais ricos do planeta, Elon Musk tem um peso importante na indústria e em muitas mais áreas da economia. Com as suas muitas empresas, este visionário consegue mover massas e...",
-			"url": "https://pplware.sapo.pt/informacao/vender-ou-nao-vender-elon-musk-pergunta-ao-twitter-o-que-fazer-com-acoes-da-tesla/",
-			"urlToImage": "https://pplware.sapo.pt/wp-content/uploads/2021/11/elon-musk.jpg",
-			"publishedAt": "2021-11-08T08:00:38Z",
-			"content": "Considerado um dos homens mais ricos do planeta, Elon Musk tem um peso importante na indústria e em muitas mais áreas da economia. Com as suas muitas empresas, este visionário consegue mover massas e… [+1951 chars]"
+			"author": null,
+			"title": "HS Vantaa | Se oli kuin ”saatanallinen messu”: Vantaalaisella rivitalo­alueella kaikui yöllä eteerinen selittämätön ääni, joka tallentui videolle",
+			"description": "Torstain ja perjantain välisenä yönä Martinlaaksossa kuului aavemainen ääni.",
+			"url": "https://www.hs.fi/kaupunki/vantaa/art-2000008392656.html",
+			"urlToImage": "https://hs.mediadelivery.fi/img/some/default/f3be2dcfcda866640304a93a54107c55.jpg",
+			"publishedAt": "2021-11-10T07:28:00Z",
+			"content": "Torstain ja perjantain välisenä yönä Martinlaaksossa kuului aavemainen ääni.Torstain ja perjantain välisenä yönä Vantaan Martinlaaksossa asuva Outi Tuomela kuuli jotain erikoista, joka esti nukahtami… [+2866 chars]"
 		},
 		{
 			"source": {
 				"id": null,
-				"name": "Meneame.net"
+				"name": "Lalibre.be"
 			},
-			"author": "F.c.r",
-			"title": "El Tesla extremeño va a donar su generador de energía, que permite tener electricidad gratis en casa sin depender de ninguna compañía",
-			"description": "Este inventor de 76 años de Extremadura quiere donar su creación más preciada: un generador de energía que permite obtener electricidad gratis desde casa.etiquetas: inventor» noticia original (www.businessinsider.es)",
-			"url": "https://www.meneame.net/m/ciencia/tesla-extremeno-va-donar-generador-energia-permite-tener-gratis",
-			"urlToImage": "https://www.meneame.net//mnmstatic.net/img/mnm/logo-350x350.png",
-			"publishedAt": "2021-11-08T07:59:36Z",
-			"content": "\"También es suya la idea de las pulseras magnéticas terapéuticas, con dos bolitas a cada lado\"\" su primer invento lo creo con tan solo 9 años: unas gafas submarinas vulcanizadas de caucho perfectamen… [+106 chars]"
+			"author": "La Libre Eco avec Belga",
+			"title": "Volkswagen va construire une nouvelle usine pour fabriquer sa concurrente à Tesla",
+			"description": "Le but sera de produire la voiture électrique Trinity.",
+			"url": "https://www.lalibre.be/economie/entreprises-startup/2021/11/10/volkswagen-va-construire-une-nouvelle-usine-pour-fabriquer-sa-concurrente-a-tesla-EGKUXZIEYRDFDEC55HZCW3YEIM/",
+			"urlToImage": "https://www.lalibre.be/resizer/-CmmtbveyjY0dwxn98s7n1k9TuE=/0x0:2555x1705/1200x630/filters:quality(70):format(jpg):watermark(cloudfront-eu-central-1.images.arcpublishing.com/ipmgroup/EF665FJJCNGHFFHRRMWR57UKMI.png,0,30,0)/cloudfront-eu-central-1.images.arcpublishing.com/ipmgroup/PR3WX3YFYZFPRNKAR7XPQS6OKI.jpg",
+			"publishedAt": "2021-11-10T07:26:21Z",
+			"content": "Volkswagen va construire une nouvelle usine près de son siège à Wolfsburg, en Allemagne, pour produire la voiture électrique Trinity, conformément à sa stratégie d'investissement pour les cinq procha… [+792 chars]"
 		},
 		{
 			"source": {
-				"id": null,
-				"name": "Idnes.cz"
+				"id": "t3n",
+				"name": "T3n"
 			},
-			"author": "https://www.facebook.com/iDNES.cz",
-			"title": "Musk by měl prodat desetinu podílu v Tesle, rozhodla anketa na Twitteru",
-			"description": "Miliardář a momentálně nejbohatší člověk na světě Elon Musk navrhl, že prodá 10 procent svých akcií automobilky Tesla. Zřejmě tak reagoval na kritiku, že movití Američané neplatí odpovídající daně. O potenciálním prodeji nechal hlasovat lidi v anketě na sociá…",
-			"url": "https://www.idnes.cz/ekonomika/podniky/elon-musk-tesla-akcie-prodej.A211108_084812_ekoakcie_mato",
-			"urlToImage": "https://servis.idnes.cz/fbimg.aspx?foto=IHA8ec4be_profimedia_0053106000.jpg&c=A211108_084812_ekoakcie_mato",
-			"publishedAt": "2021-11-08T07:59:00Z",
-			"content": "Anketu Musk zveejnil v sobotu veer. V poslední dob se hodn mluví o tom, e nerealizované zisky jsou prostedkem k vyhýbání se daním, take navrhuji prodej deseti procent svých akcií Tesly. Podporujete t… [+2760 chars]"
-		},
-		{
-			"source": {
-				"id": "nrk",
-				"name": "NRK"
-			},
-			"author": "NRK",
-			"title": "17-åring kjørt 179 km/t i 80-sone",
-			"description": "En 17 år gammel jente er dømt til samfunnsstraff etter å ha kjørt 179 kilometer i timen i 80-sone med familiens Tesla utenfor Trondheim.\nJenta, som ikke hadde førerkort, forklarte i retten at familien var bortreist da hun lånte Teslaen til familie da de var b…",
-			"url": "https://www.nrk.no/nyheter/17-aring-kjort-179-km_t-i-80-sone-1.15721182",
-			"urlToImage": "https://static.nrk.no/nrkno/serum/2.0.458/type/page/img/default.jpg",
-			"publishedAt": "2021-11-08T07:58:45Z",
-			"content": "8. november2021kl.08:58En 17 år gammel jente er dømt til samfunnsstraff etter å ha kjørt 179 kilometer i timen i 80-sone med familiens Tesla utenfor Trondheim.\r\nJenta, som ikke hadde førerkort, forkl… [+534 chars]"
-		},
-		{
-			"source": {
-				"id": "die-zeit",
-				"name": "Die Zeit"
-			},
-			"author": "ZEIT ONLINE: Wirtschaft -",
-			"title": "Tesla: Elon Musk lässt Twitter-Nutzer über Aktienverkauf abstimmen",
-			"description": "Der Milliardär hatte Follower gefragt, ob er zehn Prozent seiner Aktien am E-Auto-Hersteller Tesla verkaufen solle. Die Umfrageteilnehmer stimmten mehrheitlich mit Ja ab.",
-			"url": "https://www.zeit.de/zustimmung?url=https%3A%2F%2Fwww.zeit.de%2Fvideo%2F2021-11%2F6280889342001%2Ftesla-elon-musk-laesst-twitter-nutzer-ueber-aktienverkauf-abstimmen",
-			"urlToImage": null,
-			"publishedAt": "2021-11-08T07:55:30Z",
-			"content": "When browsing with ads:\r\nWe collect personal data and also transmit it to third-party providers\r\n that help us improve and finance our digital content. Some of the information stored on your device, … [+732 chars]"
+			"author": "t3n Redaktion",
+			"title": "Der zweite „Tesla-Fighter“ – VW will Werk für Trinity bei Wolfsburg bauen",
+			"description": "VW plant in der Nähe des Wolfsburger Stammwerks eine neue Produktionsstätte auf der grünen Wiese. Dort soll das E-Auto Trinity gefertigt werden – jenes Modell, das Tesla Konkurrenz machen soll.\nFür sein grundlegend neues Elektromodell Trinity will Volkswagen …",
+			"url": "https://t3n.de/news/trinity-vw-werk-wolfsburg-tesla-konkurrenz-1426217/",
+			"urlToImage": "https://t3n.de/news/wp-content/uploads/2021/01/shutterstock-1891505872.jpg",
+			"publishedAt": "2021-11-10T07:25:58Z",
+			"content": "Für sein grundlegend neues Elektromodell Trinity will Volkswagen in der Nähe des Stammsitzes in Wolfsburg ein separates Werk errichten. Das Auto soll 2026 auf den Markt kommen. Das am Dienstagabend a… [+2693 chars]"
 		},
 		{
 			"source": {
 				"id": null,
 				"name": "Yahoo Entertainment"
 			},
-			"author": "香港電台-大中華",
-			"title": "外交部譴責襲擊伊拉克總理行徑　冀各派共同維護安全",
-			"description": "伊拉克總理卡迪米在巴格達的住所遭到無人機襲擊受傷。 在北京，外交部發言人汪文斌表示，中方譴責襲擊伊拉克總理卡迪米的行徑。他說，當前伊拉克政治進程處於關鍵時刻，中方希望伊拉克各派別加強團結，共同維護國家安全穩定。",
-			"url": "https://hk.news.yahoo.com/%E5%A4%96%E4%BA%A4%E9%83%A8%E8%AD%B4%E8%B2%AC%E8%A5%B2%E6%93%8A%E4%BC%8A%E6%8B%89%E5%85%8B%E7%B8%BD%E7%90%86%E8%A1%8C%E5%BE%91-%E5%86%80%E5%90%84%E6%B4%BE%E5%85%B1%E5%90%8C%E7%B6%AD%E8%AD%B7%E5%AE%89%E5%85%A8-074747546.html",
-			"urlToImage": "https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo-1200x1200.png",
-			"publishedAt": "2021-11-08T07:47:47Z",
-			"content": "NurPhoto via Getty ImagesApple 2014 Tesla 2019 Autopilot Christopher Moore Apple LinkedIn Apple Tesla Stuart Bowers 2019 Tesla Autopilot Moore DMV Elon Musk FSD Tesla Musk Level 5 Moore 2019 Autopilo… [+51 chars]"
+			"author": "Fortune Business Insights",
+			"title": "New Energy Vehicle Taxi Market is Projected to Hit USD 173.37 Billion in 2027 | Market Size, Share, Forecasts, & Trends Analysis Report with COVID-19 Impact by Fortune Business Insights™",
+			"description": "New Energy Vehicle Taxi Market Key Players Studied in this Report Are Tesla Inc., (California, United States), BYD (Shenzhen, China), Anhui Jianghuai...",
+			"url": "https://finance.yahoo.com/news/energy-vehicle-taxi-market-projected-072400690.html",
+			"urlToImage": "https://s.yimg.com/ny/api/res/1.2/DxOQOMLSqxdkGOsOB54JcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD0zMjM-/https://s.yimg.com/uu/api/res/1.2/T2u2hRFVsmOrua22m4H.Zg--~B/aD0xODcxO3c9Njk0NDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/globenewswire.com/ac20c8cfaf7139a95119e96f01afcfac",
+			"publishedAt": "2021-11-10T07:24:00Z",
+			"content": "New Energy Vehicle Taxi Market Key Players Studied in this Report Are Tesla Inc., (California, United States), BYD (Shenzhen, China), Anhui Jianghuai Automobile Co Ltd (JAC) (Hefei, China), Uber Tech… [+8624 chars]"
+		},
+		{
+			"source": {
+				"id": "rtl-nieuws",
+				"name": "RTL Nieuws"
+			},
+			"author": "Bright",
+			"title": "Uitstel voor bemande maanlanding: 'Niet voor 2025'",
+			"description": "De Verenigde Staten gaan niet voor 2025 met een bemande missie naar de maan. De maanmissie loopt minstens een jaar vertraging op.",
+			"url": "https://www.rtlnieuws.nl/tech/artikel/5266186/nasa-maan-missie-maanlanding-artemis-3",
+			"urlToImage": "https://www.rtlnieuws.nl/sites/default/files/content/images/2021/11/10/maan.jpeg?itok=XD0-iKz0&width=2048&height=1152&impolicy=semi_dynamic",
+			"publishedAt": "2021-11-10T07:21:31Z",
+			"content": "Dat maakte de Amerikaanse ruimtevaartorganisatie NASA bekend. Voormalig president Donald Trump had gezegd dat er in 2024 weer mensen op de maan zouden staan.\r\nEen van de redenen voor de vertraging va… [+522 chars]"
 		},
 		{
 			"source": {
 				"id": null,
-				"name": "guru3d.com"
+				"name": "manager-magazin.de"
 			},
-			"author": "<!-- Template: news_story_author_posted -->\r\nHilbert Hagedoorn",
-			"title": "Xiaomi Introduces Mobile Water Cooling Technology on mobile Devices",
-			"description": "Compared to conventional vapor chambers solutions, this new technology has twice the cooling capabilities and ranks as the most efficient smartphone cooling solution. Xiaomi aims to bring Loop LiquidC...",
-			"url": "https://www.guru3d.com/news-story/xiaomi-introduces-mobile-water-cooling-technology-on-mobile-devices.html",
-			"urlToImage": "https://www.guru3d.com/news_teaserimage/19403",
-			"publishedAt": "2021-11-08T07:47:31Z",
-			"content": "Compared to conventional vapor chambers solutions, this new technology has twice the cooling capabilities and ranks as the most efficient smartphone cooling solution. Xiaomi aims to bring Loop Liquid… [+2642 chars]"
+			"author": "Lukas Heiny",
+			"title": "Börsengang des Elektrotruck-Bauers Rivian: Was Rivian-Boss Robert J. Scaringe von Elon Musk unterscheidet",
+			"description": "Start-up-Gründer Robert J. Scaringe strebt mit dem größten Börsengang der Elektroautogeschichte an die Wall Street. Er geht noch stärker ins Risiko als der Tesla-Chef - wird aber damit weniger reich.",
+			"url": "https://www.manager-magazin.de/unternehmen/autoindustrie/boersengang-des-elektrotruck-bauers-rivian-was-rivian-boss-robert-j-scaringe-von-elon-musk-unterscheidet-a-5ebd77a1-1a18-42b9-8972-4cecca561f9b",
+			"urlToImage": "https://cdn.prod.www.manager-magazin.de/images/52b0bb4c-0fea-4751-9e41-638f4e0895ab_w1280_r1.77_fpx33.34_fpy50.jpg",
+			"publishedAt": "2021-11-10T07:21:27Z",
+			"content": "Eigentlich wollte Robert J. Scaringe (38) seine Geldgeber mit einem Sportwagen überzeugen. \"Ich habe einen Prototyp gebaut, ein Ding, das in einem Video echt aussehen würde, aber nur zu 0,1 % echt wa… [+6919 chars]"
 		},
 		{
 			"source": {
 				"id": null,
-				"name": "Phonandroid"
-			},
-			"author": "William Zimmer",
-			"title": "BMW : certaines voitures seront privées d’écran tactile à cause de la pénurie de puces",
-			"description": "BMW a confirmé qu'il allait retirer les écrans tactiles de certains de ses modèles de voitures en raison de la pénurie mondiale de puces, qui, selon certaines estimations, pourrait durer jusqu'en...",
-			"url": "https://www.phonandroid.com/bmw-certaines-voitures-seront-privees-decran-tactile-a-cause-de-la-penurie-de-puces.html",
-			"urlToImage": "https://img.phonandroid.com/2021/11/Bmw-Touch-Screen.jpg",
-			"publishedAt": "2021-11-08T07:46:49Z",
-			"content": "BMW a confirmé qu'il allait retirer les écrans tactiles de certains de ses modèles de voitures en raison de la pénurie mondiale de puces, qui, selon certaines estimations, pourrait durer jusqu'en 202… [+2318 chars]"
-		},
-		{
-			"source": {
-				"id": "reuters",
-				"name": "Reuters"
+				"name": "Turkiyegazetesi.com.tr"
 			},
 			"author": null,
-			"title": "Tesla shares fall after Musk's Twitter poll backs stake sale",
-			"description": "Tesla Inc's Frankfurt-listed shares fell about 9% in early trading on Monday as investors prepared for Chief Executive Officer Elon Musk's proposed sale of about a tenth of his holdings in the electric-car maker following his Twitter poll.",
-			"url": "https://www.reuters.com/business/tesla-shares-fall-after-musks-twitter-poll-backs-stake-sale-2021-11-08/",
-			"urlToImage": "https://www.reuters.com/resizer/YzHCxyWxm4fK1-CBkVQusbvOh6Q=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/6DQ4JYBYBNIVRARLACK7QNXKZM.jpg",
-			"publishedAt": "2021-11-08T07:44:28Z",
-			"content": "The logo of car manufacturer Tesla is seen at a dealership in London, Britain, May 14, 2021. REUTERS/Matthew ChildsNov 8 (Reuters) - Tesla Inc's Frankfurt-listed shares fell about 9% in early trading… [+2653 chars]"
+			"title": "Küresel çip krizi yeni fabrikayla çözülecek",
+			"description": "Tayvanlı bir firma, Japonya'da çip üretim tesisi kuracağını açıkladı. Teknoloji devi Sony'nin de fabrikada hisse sahibi olacağı öğrenildi.",
+			"url": "https://www.turkiyegazetesi.com.tr/teknoloji/809458.aspx",
+			"urlToImage": "https://icdn.turkiyegazetesi.com.tr/images/haberler/2021_11/buyuk/kuresel-cip-krizi-yeni-fabrikayla-cozulecek-1636528118.jpg",
+			"publishedAt": "2021-11-10T07:20:17Z",
+			"content": "Arz-talep dengesizlii nedeniyle dünya ülkelerinin kar karya kald çip krizi derinleirken, Tayvanl çip üreticisi TSMC, Japonya'nn Kumamoto eyaletinde yeni bir fabrika kuracan açklad.\r\nÜRETM 2024'TE BAL… [+1564 chars]"
 		},
 		{
 			"source": {
 				"id": null,
-				"name": "Www.vg.no"
+				"name": "Sozcu.com.tr"
 			},
-			"author": "Josefine Ytre-Eide Bjaarstad",
-			"title": "Råkjørte i 179 km/t med familiens Tesla",
-			"description": "En 17 år gammel jente er dømt for å ha råkjørt i 179 km/t med familiens Tesla den 24. juni i år.",
-			"url": "https://www.vg.no/nyheter/innenriks/i/jawago/raakjoerte-i-179-km-t-med-familiens-tesla",
-			"urlToImage": "https://www.vg.no/vgc/hyperion/img/logo.png",
-			"publishedAt": "2021-11-08T07:43:06Z",
-			"content": "En 17 år gammel jente er dømt for å ha råkjørt i 179 km/t med familiens Tesla den 24. juni i år. \r\nFartsgrensen på stedet var 80 km/t.\r\nJentas råkjøring uten førerkort ble avslørt da en venninne send… [+1559 chars]"
+			"author": "Sözcü",
+			"title": "Elon Musk iki günde 50 milyar dolar kaybetti",
+			"description": "Tesladaki hisselerini satacağını söyleyen Elon Muskın serveti son iki günde rekor seviyede eridi. Elon Musk, Tesla hisselerinin art arda iki gün değer kaybetmesi nedeniyle Bloomberg Milyarderler Endeksi verilerine göre, 50 milyar dolar kaybetti. Muskın servet…",
+			"url": "https://www.sozcu.com.tr/2021/ekonomi/elon-musk-iki-gunde-50-milyar-dolar-kaybetti-6759936/",
+			"urlToImage": "https://i01.sozcucdn.com/wp-content/uploads/2021/11/10/iecrop/elon-musk-reuters_16_9_1594846994_16_9_1595247977_16_9_1636370522_16_9_1636528508-670x371.jpg",
+			"publishedAt": "2021-11-10T07:15:26Z",
+			"content": "Dünyann en zengin insan konumunda bulunan Tesla CEO'su Elon Musk, hisselerinin yüzde 10'unu satacan söylemesinin ardndan iki günde 50 milyar dolar kaybetti. irketin hisselerinin haberle birlikte düme… [+2708 chars]"
 		},
 		{
 			"source": {
 				"id": null,
-				"name": "Vz.ru"
+				"name": "Www.hln.be"
+			},
+			"author": "TTR",
+			"title": "Volkswagen wil nieuwe fabriek bouwen voor elektrische wagen Trinity",
+			"description": "Volkswagen gaat in de buurt van zijn hoofdkantoor in Wolfsburg (Duitsland) een nieuwe fabriek bouwen voor de productie van de elektrische wagen Trinity, zo blijkt uit de investeringsstrategie voor de volgende vijf jaar. De Trinity, die in 2026 op de markt zou…",
+			"url": "https://www.hln.be/autobedrijven/volkswagen-wil-nieuwe-fabriek-bouwen-voor-elektrische-wagen-trinity~afd04764/",
+			"urlToImage": "https://images0.persgroep.net/rcs/GgDSKZQcAhJ3UNwar05fLyrR-Hc/diocontent/209484917/_fill/1200/630/?appId=21791a8992982cd8da851550a453bd7f&quality=0.7",
+			"publishedAt": "2021-11-10T07:09:03Z",
+			"content": "De nieuwe fabriek is een zogenaamde greenfield-investering. Waar ze precies zal komen, is nog niet beslist. Ook over het investeringsbedrag werd niets meegedeeld, maar dat zou in de honderden miljoen… [+612 chars]"
+		},
+		{
+			"source": {
+				"id": null,
+				"name": "Cornubot.se"
+			},
+			"author": "Cornucopia?",
+			"title": "Rött i alla börsindex på onsdag morgon - guldet upp - Tesla rasar vidare - ICA-handlarna lägger bud på ICA",
+			"description": "Cornucopia? är Sveriges största oberoende blogg inom ekonomi, miljö, samhälle och politik.",
+			"url": "http://cornucopia.cornubot.se/2021/11/rott-i-alla-borsindex-pa-onsdag-morgon.html",
+			"urlToImage": "https://1.bp.blogspot.com/-vly1BOujw4E/YYtvt64MbmI/AAAAAAABISI/CcqruvbxQg4F0nlQ_meGtNFAmbDm-wGMQCLcBGAsYHQ/w1200-h630-p-k-no-nu/goteborg_ica_maxi.jpeg",
+			"publishedAt": "2021-11-10T07:08:00Z",
+			"content": "Samtliga börsindex bloggen följer visar rött nu på onsdag morgon, men guldpriset är uppåt. Tesla rasade vidare under gårdagen sedan Elon Musks Twitter-omröstning om han skulle sälja aktier. ICA-handl… [+1932 chars]"
+		},
+		{
+			"source": {
+				"id": "news-com-au",
+				"name": "News.com.au"
+			},
+			"author": "Carly Bass",
+			"title": "Inside doomsday prepper’s family home in off-grid Alaska home",
+			"description": "A Zombie apocalypse might seem farfetched for some but it’s highly probable according to this forward-thinking mum.",
+			"url": "https://www.news.com.au/technology/innovation/inside-doomsday-preppers-family-home-in-offgrid-alaska-home/news-story/b3b7c6964331092bf51b6f4c1f6d7e8f",
+			"urlToImage": "https://content.api.news/v3/images/bin/e9023442cffd26beaaba8e05f481689d",
+			"publishedAt": "2021-11-10T07:07:36Z",
+			"content": "With enough canned food to last six months, this Alaskan family is prepared for a Zombie apocalypse, the end of the world and every other disaster scenario.A Zombie apocalypse might seem farfetched f… [+4795 chars]"
+		},
+		{
+			"source": {
+				"id": "the-irish-times",
+				"name": "The Irish Times"
 			},
 			"author": null,
-			"title": "Илон Маск сменил имя в Twitter",
-			"description": "Основатель компаний Tesla и SpaceX Илон Маск сменил имя в Twitter, теперь он зовется Lorde Edge. Маск также сменил «место жительства» – теперь это локация под названием Tröllheim. Свои действия он пока не объяснил. Ранее Илон Маск стал самым богатым человеком…",
-			"url": "https://vz.ru/news/2021/11/8/1128012.html",
-			"urlToImage": "https://img.vz.ru/upimg/soc/soc_1128012.png",
-			"publishedAt": "2021-11-08T07:42:00Z",
-			"content": ", «. . » « 1».\r\n«, , , : , , , , , , , , , , , , , , », , «». \r\n , « , , , , , , ». \r\n« , , , , . , », .\r\n   Mount Whitney (« ») ,   .  ,    ."
+			"title": "Renault Megane E-Tech: Stylish family crossover will rattle its German rivals",
+			"description": "Renault is undergoing a renaissance. A new boss at the wheel, a pruning of the range and the imminent arrival of retro models from the brand’s 1980s heyday. \nWhile we wait for the return of the Renault 5, the French carmaker is introducing a new all-electric …",
+			"url": "https://www.irishtimes.com/life-and-style/motors/renault-megane-e-tech-stylish-family-crossover-will-rattle-its-german-rivals-1.4719490",
+			"urlToImage": "https://www.irishtimes.com/image-creator/?id=1.4719484&origw=1440",
+			"publishedAt": "2021-11-10T07:05:00Z",
+			"content": "Renault is undergoing a renaissance. A new boss at the wheel, a pruning of the range and the imminent arrival of retro models from the brands 1980s heyday.\r\nWhile we wait for the return of the Renaul… [+203 chars]"
 		},
 		{
 			"source": {
 				"id": null,
-				"name": "Ilpost.it"
+				"name": "Moneycontrol"
 			},
 			"author": null,
-			"title": "Un sondaggio su Twitter ha chiesto a Musk di vendere il 10% delle sue azioni di Tesla",
-			"description": "Era stato lo stesso Musk a pubblicarlo, dicendo che avrebbe rispettato il risultato: c'entra un dibattito sulle tasse negli Stati Uniti",
-			"url": "https://www.ilpost.it/2021/11/08/twitter-elon-musk-azioni-tesla/",
-			"urlToImage": "https://www.ilpost.it/wp-content/uploads/2021/11/AP20069781414141.jpg",
-			"publishedAt": "2021-11-08T07:41:57Z",
-			"content": "In un sondaggio su Twitter, più di tre milioni di persone hanno chiesto a Elon Musk, imprenditore statunitense fondatore di Tesla e una delle persone più ricche al mondo, di vendere il 10 per cento d… [+2419 chars]"
-		},
-		{
-			"source": {
-				"id": null,
-				"name": "CNA"
-			},
-			"author": null,
-			"title": "Tesla shares fall after Musk's Twitter poll backs stake sale",
-			"description": "Tesla Inc's Frankfurt-listed shares fell about 9per cent in early trading on Monday as investors prepared for Chief Executive Officer Elon Musk's proposed sale of about a tenth of his holdings in the electric-car maker following his Twitter poll.Musk, the wor…",
-			"url": "https://www.channelnewsasia.com/business/tesla-shares-fall-after-musks-twitter-poll-backs-stake-sale-2298321",
-			"urlToImage": "https://onecms-res.cloudinary.com/image/upload/s--yhy47aoE--/fl_relative%2Cg_south_east%2Cl_one-cms:core:watermark:reuters%2Cw_0.1/f_auto%2Cq_auto/c_fill%2Cg_auto%2Ch_676%2Cw_1200/v1/one-cms/core/2021-11-08t074407z_3_lynxmpeha70a3_rtroptp_3_tesla-musk.jpg?itok=-zVJx6of",
-			"publishedAt": "2021-11-08T07:39:29Z",
-			"content": "Tesla Inc's Frankfurt-listed shares fell about 9per cent in early trading on Monday as investors prepared for Chief Executive Officer Elon Musk's proposed sale of about a tenth of his holdings in the… [+2464 chars]"
-		},
-		{
-			"source": {
-				"id": null,
-				"name": "Vnexpress.net"
-			},
-			"author": "VnExpress",
-			"title": "Elon Musk sắp phải trả 15 tỷ USD tiền thuế",
-			"description": "Elon Musk đối mặt với khoản thuế hơn 15 tỷ USD nếu thực hiện quyền chọn mua cổ phiếu và kế hoạch bán cổ phiếu Tesla trong năm nay có thể xảy ra.",
-			"url": "https://vnexpress.net/elon-musk-sap-phai-tra-15-ty-usd-tien-thue-4382920.html",
-			"urlToImage": "https://vcdn1-kinhdoanh.vnecdn.net/2021/11/08/mukkk43431635846517-1636353728-6194-1636353793.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=9yy5s_3ErkkaijAuzmkQiQ",
-			"publishedAt": "2021-11-08T07:38:22Z",
-			"content": "Elon Musk i mt vi khon thu hn 15 t USD nu thc hin quyn chn mua c phiu và k hoch bán c phiu Tesla trong nm nay có th xy ra.Cui tun trc, Musk ã hi 62,7 triu ngi theo dõi trên mng xã hi Twitter rng có n… [+1548 chars]"
-		},
-		{
-			"source": {
-				"id": "rt",
-				"name": "RT"
-			},
-			"author": "RT en Español\n , RT en Español",
-			"title": "Elon Musk cambia su nombre en Twitter y sugieren que tendría que ver con el dogecoin",
-			"description": "El empresario también ha modificado el paradero que indica en su cuenta de la red social.",
-			"url": "https://actualidad.rt.com/actualidad/409615-elon-musk-cambiar-nombre-twitter-sugerir-dogecoin",
-			"urlToImage": "https://cdni.rt.com/actualidad/public_images/2021.11/article/6188d2fde9ff717907462f26.JPG",
-			"publishedAt": "2021-11-08T07:36:31Z",
-			"content": "El director general de Tesla y SpaceX, Elon Musk, ha cambiado su nombre en Twitter, causando perplejlidad entre muchos de sus seguidores en esta red social.\r\nLorde Edge es el nuevo nombre de cuenta d… [+754 chars]"
-		},
-		{
-			"source": {
-				"id": null,
-				"name": "Mein-deal.com"
-			},
-			"author": "Micha",
-			"title": "5x 1 Liter Glysantin G48® Kühlerfrostschutzkonzentrat blaugrün für 31,99€ (statt 37€)",
-			"description": "Eine kleine aber feine Ersparnis von 5€ bekommt man gerade in den eBay WOWs, wenn man sich für die 5x 1 Liter Glysantin G48® Kühlerfrostschutzkonzentrat",
-			"url": "https://www.mein-deal.com/glysantin-g48-kuehlerfrostschutzkonzentrat/",
-			"urlToImage": "https://www.mein-deal.com/wp-content/uploads//2021/11/firefox_zx8BAt7QeJ.jpg",
-			"publishedAt": "2021-11-08T07:35:37Z",
-			"content": "Eine kleine aber feine Ersparnis von 5 bekommt man gerade in den eBay WOWs, wenn man sich für die 5x 1 Liter Glysantin G48® Kühlerfrostschutzkonzentrat blaugrün für 31,99 inkl. Versand entscheidet. A… [+1163 chars]"
-		},
-		{
-			"source": {
-				"id": null,
-				"name": "Korrespondent.net"
-			},
-			"author": "1",
-			"title": "Илон Маск сменил имя в Twitter и стал \"лордом\"",
-			"description": "Миллиардер и один из самых богатых людей в мире неожиданно изменил отображаемое имя и локацию в социальной сети.",
-			"url": "https://korrespondent.net/lifestyle/4414771-ylon-mask-smenyl-ymia-v-Twitter-y-stal-lordom",
-			"urlToImage": "https://kor.ill.in.ua/m/190x120/2679607.jpg",
-			"publishedAt": "2021-11-08T07:35:00Z",
-			"content": "Tesla SpaceX Twitter. Lorde Edge Trollheim.\r\n, , 300 .\r\n .net Telegram. https://t.me/korrespondentnet"
-		},
-		{
-			"source": {
-				"id": null,
-				"name": "Korrespondent.net"
-			},
-			"author": "1",
-			"title": "Ілон Маск змінив ім'я у Twitter і став \"лордом\"",
-			"description": "Мільярдер і найбагатша людина у світі несподівано змінив відображене ім'я та локацію в соціальній мережі.",
-			"url": "https://ua.korrespondent.net/lifestyle/4414771-ilon-mask-zminyv-imia-u-Twitter-i-stav-lordom",
-			"urlToImage": "https://kor.ill.in.ua/m/190x120/2679607.jpg",
-			"publishedAt": "2021-11-08T07:35:00Z",
-			"content": "Tesla SpaceX ' Twitter. Lorde Edge Trollheim.\r\n.\r\n, , 10% Tesla.\r\n, - . , . , 57,9% .\r\n, , 300 .\r\n.net Telegram.  https://t.me/korrespondentnet"
-		},
-		{
-			"source": {
-				"id": null,
-				"name": "Money.bg"
-			},
-			"author": "Money.bg",
-			"title": "Мъск се готви да продаде 10% от акциите си в Tesla",
-			"description": "Мъск се готви да продаде 10% от акциите си в Teslamoney.bg",
-			"url": "https://money.bg/business/mask-se-gotvi-da-prodade-10-ot-aktsiite-si-v-tesla.html",
-			"urlToImage": "https://webnews.bg/uploads/images/16/8716/528716/768x432.jpg?_=1619446969",
-			"publishedAt": "2021-11-08T07:32:36Z",
-			"content": "Twitter : Tesla 10 , Bloomberg.\r\n58 , . $21 .\r\n Tesla 6,9 , , .\r\n $15 . , \"\", CNBC.\r\n Tesla , . 22,8 . $6,24 . $1 222,09, , $28 .\r\n , . .\r\n\" , , , . \", .\r\n . , , 37 , 3,8 , 13,3 .\r\n, 54,1 . $15 .\r\n .… [+60 chars]"
+			"title": "China vehicle sales fall 9.4% in October: Industry body",
+			"description": "Overall sales in the worldâs biggest car market were 2.33 million vehicles in October, data from the China Association of Automobile Manufacturers (CAAM) showed.",
+			"url": "https://www.moneycontrol.com/news/world/china-vehicle-sales-fall-9-4-in-october-industry-body-7701131.html",
+			"urlToImage": "https://images.moneycontrol.com/static-mcnews/2021/07/auto_shutterstock_131366753-770x433.jpg",
+			"publishedAt": "2021-11-10T07:01:13Z",
+			"content": "Chinas auto sales fell in October for a sixth consecutive month, slumping 9.4% from a year earlier, industry data showed on Wednesday, as a prolonged global shortage of semiconductors disrupts produc… [+1305 chars]"
 		}
 	]
 }
