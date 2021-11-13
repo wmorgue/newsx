@@ -10,9 +10,10 @@ import Foundation
 
 struct NewsAPI {
 	private init() {}
-	// Singleton
+	/// Singleton
 	static let shared: NewsAPI = .init()
-	
+
+	/// Shared URL session
 	private let session = URLSession.shared
 	/// Private API Key from `newsapi.org`
 	private let apiKey: String = ""
@@ -38,6 +39,7 @@ struct NewsAPI {
 				let apiResponse: NewsAPIResponse = try jsonDecoder.decode(NewsAPIResponse.self, from: data)
 				
 				if apiResponse.status == "ok" {
+					// Return articles or empty array
 					return apiResponse.articles ?? []
 				} else {
 					throw generateError(description: apiResponse.message ?? "An error occured")
@@ -53,11 +55,15 @@ struct NewsAPI {
 		url += "apiKey=\(apiKey)"
 		url += "&language=ru"
 		url += "&category=\(category.rawValue)"
-		
 		return URL(string: url)!
 	}
 	
-	private func generateError(code: Int = -1, description: String) -> Error {
+	/// Wrapper for NS Error
+	/// - Parameters:
+	///   - code: status code
+	///   - description: system text
+	/// - Returns: Information about an error
+	private func generateError(code: Int = 1, description: String) -> Error {
 		NSError(domain: "NewAPI", code: code, userInfo: [NSLocalizedDescriptionKey: description])
 	}
 }
