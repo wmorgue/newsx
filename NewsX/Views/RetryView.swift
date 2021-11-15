@@ -36,5 +36,6 @@ extension RetryView {
 struct RetryView_Previews: PreviewProvider {
 	static var previews: some View {
 		RetryView(text: "An error ocurred") {}
+		.previewDisplayName("Retry")
 	}
 }

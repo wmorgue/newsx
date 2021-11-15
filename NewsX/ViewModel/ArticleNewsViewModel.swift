@@ -15,7 +15,9 @@ enum DataFetchPhase<T> {
 }
 
 struct FetchTaskToken: Equatable {
+	/// News category
 	var category: Category
+	/// Usually date now
 	var token: Date
 }
 
@@ -35,6 +37,7 @@ final class ArticleNewsViewModel {
 		self.fetchTaskToken = FetchTaskToken(category: selectedCategory, token: Date())
 	}
 	
+	/// Async load articles with phase's
 	func loadArticles() async {
 		if Task.isCancelled { return }
 		phase = .empy

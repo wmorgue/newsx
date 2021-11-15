@@ -32,13 +32,13 @@ struct Article {
 		return URL(string: image)
 	}
 	var captionText: String {
-		"\(source.name) · \(relativeDate.localizedString(for: publishedAt, relativeTo: Date()))"
+		"\(source.name.lowercased()) · \(relativeDate.localizedString(for: publishedAt, relativeTo: Date()))"
 	}
 }
 
 
 extension Article {
-	/// Return array of articles from `News.json`
+	/// Return articles from `News.json` or empty array
 	static var previewData: [Article] {
 		let previewDataURL = Bundle.main.url(forResource: "News", withExtension: "json")!
 		let jsonDecoder = JSONDecoder()

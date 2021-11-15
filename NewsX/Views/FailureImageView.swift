@@ -26,5 +26,6 @@ struct FailureImageView: View {
 struct FailureImageView_Previews: PreviewProvider {
 	static var previews: some View {
 		FailureImageView()
+			.previewDisplayName("Failure Image")
 	}
 }

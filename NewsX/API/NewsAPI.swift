@@ -16,7 +16,7 @@ struct NewsAPI {
 	/// Shared URL session
 	private let session = URLSession.shared
 	/// Private API Key from `newsapi.org`
-	private let apiKey: String = "c75995c7a7634018829ffdcbb82aeaf1"
+	private let apiKey: String = Constant.apiKey
 	
 	/// JSON Decoder with `.iso8601` strategy
 	private let jsonDecoder: JSONDecoder = {
@@ -25,7 +25,7 @@ struct NewsAPI {
 		return decoder
 	}()
 	
-	/// Get all Articles async
+	/// Get all Articles async and generate news URL from category
 	func fetch(from category: Category) async throws -> [Article] {
 		let url = generateNewsURL(from: category)
 		let (data, response) = try await session.data(from: url)
@@ -50,10 +50,16 @@ struct NewsAPI {
 		}
 	}
 	
-	private func generateNewsURL(from category: Category) -> URL {
+	
+	/// Generate url for news in `Russian` via selected category
+	/// - Parameter category: News category, like a technology, business, sport, etc.
+	/// - Parameter language: News language region setting's. Default `Russian`.
+	/// - Returns: URL string with selected language and category
+	private func generateNewsURL(from category: Category, language: String = "ru") -> URL {
+		// By default `top-headlines`
 		var url = "https://newsapi.org/v2/top-headlines?"
 		url += "apiKey=\(apiKey)"
-		url += "&language=ru"
+		url += "&language=\(language)"
 		url += "&category=\(category.rawValue)"
 		return URL(string: url)!
 	}
