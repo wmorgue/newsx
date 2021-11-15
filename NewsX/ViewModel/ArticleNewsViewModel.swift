@@ -14,11 +14,16 @@ enum DataFetchPhase<T> {
 	case failure(Error)
 }
 
+struct FetchTaskToken: Equatable {
+	var category: Category
+	var token: Date
+}
+
 @MainActor
 final class ArticleNewsViewModel {
 	private let newsAPI = NewsAPI.shared
 	
-	@Published var selectedCatagory: Category
+	@Published var fetchTaskToken: FetchTaskToken
 	@Published var phase = DataFetchPhase<[Article]>.empy
 	
 	init(articles: [Article]? = nil, selectedCategory: Category = .general) {
@@ -27,15 +32,18 @@ final class ArticleNewsViewModel {
 		} else {
 			self.phase = .empy
 		}
-		self.selectedCatagory = selectedCategory
+		self.fetchTaskToken = FetchTaskToken(category: selectedCategory, token: Date())
 	}
 	
 	func loadArticles() async {
+		if Task.isCancelled { return }
 		phase = .empy
 		do {
-			let articles = try await newsAPI.fetch(from: selectedCatagory)
+			let articles = try await newsAPI.fetch(from: fetchTaskToken.category)
+			if Task.isCancelled { return }
 			phase = .success(articles)
 		} catch {
+			if Task.isCancelled { return }
 			phase = .failure(error)
 		}
 	}

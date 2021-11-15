@@ -18,6 +18,7 @@ enum Category: String, CaseIterable {
 	case science
 	case health
 	
+	/// Human redable text representation for category case's
 	var text: String {
 		// If case general -> "Top Headlines"
 		if self == .general { return "Top Headlines" }

@@ -16,7 +16,7 @@ struct NewsAPI {
 	/// Shared URL session
 	private let session = URLSession.shared
 	/// Private API Key from `newsapi.org`
-	private let apiKey: String = ""
+	private let apiKey: String = "c75995c7a7634018829ffdcbb82aeaf1"
 	
 	/// JSON Decoder with `.iso8601` strategy
 	private let jsonDecoder: JSONDecoder = {
