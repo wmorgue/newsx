@@ -14,6 +14,8 @@ struct ArticleRowView: View {
 	let article: Article
 	init(_ article: Article) { self.article = article }
 	
+	@EnvironmentObject var articleBookmarkVM: ArticleBookmarkViewModel
+	
 	var body: some View {
 		VStack(alignment: .leading, spacing: 20) {
 			AsyncImage(url: article.imageURL, transaction: Constant.imageTransaction) { asyncImagePhase in
@@ -64,14 +66,19 @@ struct ArticleRowView: View {
 }
 
 extension ArticleRowView {
+	/// Bookmark button
 	private var bookmarkButton: some View {
 		Button {
-			// Implement saving to bookmark's
+			toggleBookmark(for: article)
 		} label: {
-			Image(systemName: "bookmark")
+			let imageName: String = articleBookmarkVM.isBookmarked(for: article) ? "bookmark.fill" : "bookmark"
+			Image(systemName: imageName)
 		}
 		.buttonStyle(.bordered)
 	}
+	
+	
+	/// Sharing button
 	private var sharingButton: some View {
 		Button {
 			presentActionSheet(for: article.articleURL)
@@ -80,6 +87,14 @@ extension ArticleRowView {
 		}
 		.buttonStyle(.bordered)
 
+	}
+	
+	private func toggleBookmark(for article: Article) {
+		if articleBookmarkVM.isBookmarked(for: article) {
+			articleBookmarkVM.removeBookmark(for: article)
+		} else {
+			articleBookmarkVM.addBookmark(for: article)
+		}
 	}
 	
 	/// Present share action sheet for SwiftUI
@@ -96,6 +111,8 @@ extension ArticleRowView {
 }
 
 struct ArticleRowView_Previews: PreviewProvider {
+	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel()
+	
 	static var previews: some View {
 		NavigationView {
 			List {
@@ -104,6 +121,7 @@ struct ArticleRowView_Previews: PreviewProvider {
 			}
 			.listStyle(.plain)
 		}
+		.environmentObject(articleBookmarkVM)
 		.previewDisplayName("Article Row")
 	}
 }

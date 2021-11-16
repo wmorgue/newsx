@@ -14,6 +14,8 @@ struct Source {
 	let name: String
 }
 
+
+/// Article model for API
 struct Article {
 	let source: Source
 	let title: String

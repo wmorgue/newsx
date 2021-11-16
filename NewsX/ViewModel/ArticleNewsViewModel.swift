@@ -21,6 +21,8 @@ struct FetchTaskToken: Equatable {
 	var token: Date
 }
 
+
+/// View model news for article
 @MainActor
 final class ArticleNewsViewModel {
 	private let newsAPI = NewsAPI.shared
@@ -39,16 +41,17 @@ final class ArticleNewsViewModel {
 	
 	/// Async load articles with phase's
 	func loadArticles() async {
-		if Task.isCancelled { return }
-		phase = .empy
-		do {
-			let articles = try await newsAPI.fetch(from: fetchTaskToken.category)
-			if Task.isCancelled { return }
-			phase = .success(articles)
-		} catch {
-			if Task.isCancelled { return }
-			phase = .failure(error)
-		}
+		phase = .success(Article.previewData)
+//		if Task.isCancelled { return }
+//		phase = .empy
+//		do {
+//			let articles = try await newsAPI.fetch(from: fetchTaskToken.category)
+//			if Task.isCancelled { return }
+//			phase = .success(articles)
+//		} catch {
+//			if Task.isCancelled { return }
+//			phase = .failure(error)
+//		}
 	}
 }
 

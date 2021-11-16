@@ -19,8 +19,11 @@ struct MainView: View {
 }
 
 struct MainView_Previews: PreviewProvider {
+	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel()
+	
 	static var previews: some View {
 		MainView()
+			.environmentObject(articleBookmarkVM)
 			.previewDisplayName("Main screen")
 	}
 }
