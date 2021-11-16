@@ -19,7 +19,7 @@ struct MainView: View {
 }
 
 struct MainView_Previews: PreviewProvider {
-	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel()
+	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel.shared
 	
 	static var previews: some View {
 		MainView()

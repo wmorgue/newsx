@@ -79,7 +79,7 @@ extension NewsTabView {
 
 
 struct NewsTabView_Previews: PreviewProvider {
-	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel()
+	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel.shared
 	
 	static var previews: some View {
 		let previewData: ArticleNewsViewModel = .init(articles: Article.previewData)

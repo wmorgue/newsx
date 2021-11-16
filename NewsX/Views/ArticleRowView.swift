@@ -69,7 +69,9 @@ extension ArticleRowView {
 	/// Bookmark button
 	private var bookmarkButton: some View {
 		Button {
-			toggleBookmark(for: article)
+			Task {
+				await toggleBookmark(for: article)
+			}
 		} label: {
 			let imageName: String = articleBookmarkVM.isBookmarked(for: article) ? "bookmark.fill" : "bookmark"
 			Image(systemName: imageName)
@@ -89,11 +91,11 @@ extension ArticleRowView {
 
 	}
 	
-	private func toggleBookmark(for article: Article) {
+	private func toggleBookmark(for article: Article) async {
 		if articleBookmarkVM.isBookmarked(for: article) {
-			articleBookmarkVM.removeBookmark(for: article)
+			await articleBookmarkVM.removeBookmark(for: article)
 		} else {
-			articleBookmarkVM.addBookmark(for: article)
+			await articleBookmarkVM.addBookmark(for: article)
 		}
 	}
 	
@@ -111,7 +113,7 @@ extension ArticleRowView {
 }
 
 struct ArticleRowView_Previews: PreviewProvider {
-	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel()
+	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel.shared
 	
 	static var previews: some View {
 		NavigationView {
