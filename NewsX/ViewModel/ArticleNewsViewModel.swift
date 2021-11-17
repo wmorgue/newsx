@@ -9,7 +9,7 @@ import SwiftUI
 
 
 enum DataFetchPhase<T> {
-	case empy
+	case empty
 	case success(T)
 	case failure(Error)
 }
@@ -28,13 +28,13 @@ final class ArticleNewsViewModel {
 	private let newsAPI = NewsAPI.shared
 	
 	@Published var fetchTaskToken: FetchTaskToken
-	@Published var phase = DataFetchPhase<[Article]>.empy
+	@Published var phase = DataFetchPhase<[Article]>.empty
 	
 	init(articles: [Article]? = nil, selectedCategory: Category = .general) {
 		if let articles = articles {
 			self.phase = .success(articles)
 		} else {
-			self.phase = .empy
+			self.phase = .empty
 		}
 		self.fetchTaskToken = FetchTaskToken(category: selectedCategory, token: Date())
 	}
@@ -43,7 +43,7 @@ final class ArticleNewsViewModel {
 	func loadArticles() async {
 		phase = .success(Article.previewData)
 //		if Task.isCancelled { return }
-//		phase = .empy
+//		phase = .empty
 //		do {
 //			let articles = try await newsAPI.fetch(from: fetchTaskToken.category)
 //			if Task.isCancelled { return }

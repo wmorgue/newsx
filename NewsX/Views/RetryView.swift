@@ -7,9 +7,10 @@
 
 import SwiftUI
 
+// TODO: Add documentation
 struct RetryView: View {
 	let text: String
-	let retryAction: () -> Void
+	let retryAction: () async -> Void
 	
 	var body: some View {
 		VStack(spacing: 8) {
@@ -25,7 +26,9 @@ struct RetryView: View {
 extension RetryView {
 	private var retryButton: some View {
 		Button {
-			retryAction()
+			Task {
+				await retryAction()
+			}
 		} label: {
 			Text("Try again")
 		}

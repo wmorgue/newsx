@@ -31,7 +31,7 @@ extension NewsTabView {
 	@ViewBuilder
 	private var overlayView: some View {
 		switch articleNewsVM.phase {
-			case .empy:
+			case .empty:
 				ProgressView()
 			case .success(let result) where result.isEmpty:
 				EmptyPlaceholderView(text: "No Articles") {

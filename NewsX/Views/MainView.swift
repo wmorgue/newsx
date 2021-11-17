@@ -12,8 +12,10 @@ struct MainView: View {
 		TabView {
 			NewsTabView()
 				.tabItem { Label("News", systemImage: "newspaper") }
+			SearchTabView()
+				.tabItem { Label("Search", systemImage: "doc.text.magnifyingglass") }
 			BookmarkTabView()
-				.tabItem { Label("Saved", systemImage: "bookmark") }
+				.tabItem { Label("Saved", systemImage: "bookmark.square") }
 		}
 	}
 }

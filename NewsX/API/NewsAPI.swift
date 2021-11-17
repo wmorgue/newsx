@@ -27,7 +27,14 @@ struct NewsAPI {
 	
 	/// Get all Articles async and generate news URL from category
 	func fetch(from category: Category) async throws -> [Article] {
-		let url = generateNewsURL(from: category)
+		try await fetchArticles(from: generateNewsURL(from: category))
+	}
+	
+	func search(for query: String) async throws -> [Article] {
+		try await fetchArticles(from: generateSearchURL(from: query))
+	}
+	
+	private func fetchArticles(from url: URL) async throws -> [Article] {
 		let (data, response) = try await session.data(from: url)
 		
 		guard let response = response as? HTTPURLResponse else {
@@ -48,6 +55,16 @@ struct NewsAPI {
 			default:
 				throw generateError(description: "A server error occured")
 		}
+	}
+	
+	private func generateSearchURL(from query: String) -> URL {
+		let percentEncodedgString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
+		
+		var url = "https://newsapi.org/v2/everything?"
+		url += "apiKey=\(apiKey)"
+		url += "&language=ru"
+		url += "&q=\(percentEncodedgString)"
+		return URL(string: url)!
 	}
 	
 	
