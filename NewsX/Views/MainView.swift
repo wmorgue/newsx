@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Documentation
 struct MainView: View {
 	var body: some View {
 		TabView {
@@ -19,6 +20,7 @@ struct MainView: View {
 		}
 	}
 }
+
 
 struct MainView_Previews: PreviewProvider {
 	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel.shared

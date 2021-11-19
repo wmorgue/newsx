@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Documentation
 struct ArticleListView: View {
 	let articles: [Article]
 	

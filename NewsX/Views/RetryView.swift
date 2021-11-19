@@ -16,6 +16,7 @@ struct RetryView: View {
 		VStack(spacing: 8) {
 			Text(text)
 				.font(.callout)
+				.padding(.vertical)
 				.multilineTextAlignment(.center)
 			
 			retryButton

@@ -7,8 +7,9 @@
 
 import SwiftUI
 
+// TODO: Documentation
 struct SearchTabView: View {
-	@StateObject var searchVM = ArticleSearchViewModel()
+	@StateObject var searchVM = ArticleSearchViewModel.shared
 	
 	var body: some View {
 		NavigationView {
@@ -16,10 +17,10 @@ struct SearchTabView: View {
 				.overlay(searchOverlay)
 				.navigationTitle("Search")
 		}
-		.searchable(text: $searchVM.searchQuery)
+		.searchable(text: $searchVM.searchQuery, prompt: "Search article") { searchSuggestions }
 		.onChange(of: searchVM.searchQuery) { query in
-			// If search cancelled by button, set phase to empty
-			// and show EmptyPlaceholderView
+			// If search cancelled by hit the button,
+			// set phase to empty and show EmptyPlaceholderView
 			guard !query.isEmpty else {
 				return searchVM.dataFetchPhase = .empty
 			}
@@ -30,6 +31,7 @@ struct SearchTabView: View {
 
 
 extension SearchTabView {
+	// TODO: Documentation
 	private var articles: [Article] {
 		if case .success(let article) = searchVM.dataFetchPhase {
 			return article
@@ -38,12 +40,17 @@ extension SearchTabView {
 		}
 	}
 	
+	// TODO: Documentation
 	@ViewBuilder
 	private var searchOverlay: some View {
 		switch searchVM.dataFetchPhase {
 			case .empty:
 				if !searchVM.searchQuery.isEmpty {
 					ProgressView()
+				} else if !searchVM.history.isEmpty {
+					SearchHistoryListView(searchVM: searchVM) { newValue in
+						searchVM.searchQuery = newValue
+					}
 				} else {
 					EmptyPlaceholderView(text: "Type to search news") {
 						Image(systemName: "magnifyingglass")
@@ -59,9 +66,28 @@ extension SearchTabView {
 		}
 	}
 	
+	// TODO: Documentation
 	private func search() {
+		let trimmedSearchQuery = searchVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+		
+		if !trimmedSearchQuery.isEmpty { searchVM.addHistory(trimmedSearchQuery) }
+		
 		Task {
 			await searchVM.searchArticle()
+		}
+	}
+	
+	// TODO: Documentation
+	@ViewBuilder
+	private var searchSuggestions: some View {
+		let keywords = ["Apple", "iOS 15", "Genshin Impact", "Elon Musk"]
+		
+		ForEach(keywords, id: \.self) { text in
+			Button {
+				searchVM.searchQuery = text
+			} label: {
+				Text(text)
+			}
 		}
 	}
 }
@@ -74,5 +100,6 @@ struct SearchTabView_Previews: PreviewProvider {
 		SearchTabView()
 			.environmentObject(bookmarkVM)
 			.previewDisplayName("Search Tab")
+			.preferredColorScheme(.dark)
 	}
 }

@@ -11,6 +11,7 @@ import SwiftUI
 /// Provided a constant for specific UI and other stuff
 final class Constant {
 	/// Private API key,  but available for GitHub 😁
+	// https://nshipster.com/secrets/
 	static let apiKey: String = "c75995c7a7634018829ffdcbb82aeaf1"
 	
 	/// List Insets with 0 everyvere

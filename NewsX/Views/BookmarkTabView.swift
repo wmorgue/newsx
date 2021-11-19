@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Documentation
 struct BookmarkTabView: View {
 	@State private var searchText: String = ""
 	@EnvironmentObject var articleBookmarkVM: ArticleBookmarkViewModel
@@ -32,17 +33,14 @@ extension BookmarkTabView {
 				Image(systemName: "bookmark.slash")
 			}
 			// TODO: Под вопросом 🤔
-//			.navigationBarHidden(true)
+			//			.navigationBarHidden(true)
 		}
 	}
 	
 	
 	/// Filtered articles by title or description text
 	private var articles: [Article] {
-//		if searchText.isEmpty {
-//			return articleBookmarkVM.bookmarks
-//		}
-		guard searchText.isEmpty else { return articleBookmarkVM.bookmarks }
+		guard !searchText.isEmpty else { return articleBookmarkVM.bookmarks }
 		
 		return articleBookmarkVM.bookmarks
 			.filter {

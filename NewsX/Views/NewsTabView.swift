@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Documentation
 struct NewsTabView: View {
 	@StateObject var articleNewsVM = ArticleNewsViewModel()
 	private var fetchTaskToken: FetchTaskToken {
@@ -20,8 +21,7 @@ struct NewsTabView: View {
 				.refreshable(action: refreshTask)
 				.task(id: fetchTaskToken, loadArticles)
 				.navigationBarTitleDisplayMode(.inline)
-				.navigationTitle(fetchTaskToken.category.text)
-				.navigationBarItems(trailing: menu)
+				.navigationBarItems(leading: leadingCategoryText, trailing: menu)
 		}
 	}
 }
@@ -59,7 +59,13 @@ extension NewsTabView {
 	
 	@Sendable
 	private func refreshTask() {
-		articleNewsVM.fetchTaskToken = FetchTaskToken(category: fetchTaskToken.category, token: Date())
+		DispatchQueue.main.async {
+			articleNewsVM.fetchTaskToken = FetchTaskToken(category: fetchTaskToken.category, token: Date())
+		}
+	}
+	
+	private var leadingCategoryText: Text {
+		Text(fetchTaskToken.category.text)
 	}
 	
 	private var menu: some View {

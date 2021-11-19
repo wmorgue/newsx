@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+// TODO: Documentation
 struct ArticleRowView: View {
 	
 	/// Article model

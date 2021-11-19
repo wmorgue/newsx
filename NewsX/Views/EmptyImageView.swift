@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Documentation
 struct EmptyImageView: View {
 	var body: some View {
 		HStack {
