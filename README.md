@@ -4,8 +4,9 @@
 
 - [ ] Async/await, Actor features
 - [ ] Documentation to custom views
+- [ ] Application icon
 - [ ] Localizing
 - [ ] CloudKit
-- [ ] Cached AsyncImage
+- [ ] Caching articles
 - [ ] Write test
 

@@ -25,6 +25,19 @@ enum Category: String, CaseIterable {
 		// For other case's return capitalized raw value
 		return rawValue.capitalized
 	}
+	
+	/// A system symbol image for category
+	var systemImage: String {
+		switch self {
+			case .general: return "newspaper"
+			case .business: return "building.2"
+			case .technology: return "laptopcomputer.and.iphone"
+			case .entertainment: return "homepodmini.and.appletv"
+			case .sports: return "sportscourt"
+			case .science: return "brain.head.profile"
+			case .health: return "cross"
+		}
+	}
 }
 
 

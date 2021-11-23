@@ -9,14 +9,14 @@ import SwiftUI
 
 // TODO: Documentation
 struct MainView: View {
+	@Environment(\.horizontalSizeClass) var horizontalSizeClass
+	
 	var body: some View {
-		TabView {
-			NewsTabView()
-				.tabItem { Label("News", systemImage: "newspaper") }
-			SearchTabView()
-				.tabItem { Label("Search", systemImage: "doc.text.magnifyingglass") }
-			BookmarkTabView()
-				.tabItem { Label("Saved", systemImage: "bookmark.square") }
+		switch horizontalSizeClass {
+			case .compact:
+				TabContentView()
+			default:
+				SidebarContentView()
 		}
 	}
 }
@@ -29,5 +29,6 @@ struct MainView_Previews: PreviewProvider {
 		MainView()
 			.environmentObject(articleBookmarkVM)
 			.previewDisplayName("Main screen")
+			.previewInterfaceOrientation(.portrait)
 	}
 }
