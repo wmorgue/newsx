@@ -12,20 +12,18 @@ struct SearchTabView: View {
 	@StateObject var searchVM = ArticleSearchViewModel.shared
 	
 	var body: some View {
-		NavigationView {
-			ArticleListView(articles: articles)
-				.overlay(searchOverlay)
-				.navigationTitle("Search")
-		}
-		.searchable(text: $searchVM.searchQuery, prompt: "Search article") { searchSuggestions }
-		.onChange(of: searchVM.searchQuery) { query in
-			// If search cancelled by hit the button,
-			// set phase to empty and show EmptyPlaceholderView
-			guard !query.isEmpty else {
-				return searchVM.dataFetchPhase = .empty
+		ArticleListView(articles: articles)
+			.overlay(searchOverlay)
+			.navigationTitle("Search")
+			.searchable(text: $searchVM.searchQuery, prompt: "Search article") { searchSuggestions }
+			.onChange(of: searchVM.searchQuery) { query in
+				// If search cancelled by hit the button,
+				// set phase to empty and show EmptyPlaceholderView
+				guard !query.isEmpty else {
+					return searchVM.dataFetchPhase = .empty
+				}
 			}
-		}
-		.onSubmit(of: .search, search)
+			.onSubmit(of: .search, search)
 	}
 }
 

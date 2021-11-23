@@ -13,12 +13,10 @@ struct BookmarkTabView: View {
 	@EnvironmentObject var articleBookmarkVM: ArticleBookmarkViewModel
 	
 	var body: some View {
-		NavigationView {
-			ArticleListView(articles: articles)
-				.overlay(bookmarkOverlay(isEmpty: articles.isEmpty))
-				.navigationTitle("Saved articles")
-		}
-		.searchable(text: $searchText)
+		ArticleListView(articles: articles)
+			.overlay(bookmarkOverlay(isEmpty: articles.isEmpty))
+			.navigationTitle("Saved articles")
+			.searchable(text: $searchText)
 	}
 }
 

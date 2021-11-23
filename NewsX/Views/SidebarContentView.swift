@@ -51,7 +51,7 @@ extension SidebarContentView {
 		switch item {
 			case .saved: BookmarkTabView()
 			case .search: SearchTabView()
-			case .category(_): NewsTabView()
+			case .category(let category): NewsTabView(category: category)
 		}
 	}
 }

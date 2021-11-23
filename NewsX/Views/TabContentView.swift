@@ -10,12 +10,20 @@ import SwiftUI
 struct TabContentView: View {
 	var body: some View {
 		TabView {
-			NewsTabView()
-				.tabItem { Label("News", systemImage: "newspaper") }
-			SearchTabView()
-				.tabItem { Label("Search", systemImage: "doc.text.magnifyingglass") }
-			BookmarkTabView()
-				.tabItem { Label("Saved", systemImage: "bookmark.square") }
+			NavigationView {
+				NewsTabView()
+			}
+			.tabItem { Label("News", systemImage: "newspaper") }
+			
+			NavigationView {
+				SearchTabView()
+			}
+			.tabItem { Label("Search", systemImage: "doc.text.magnifyingglass") }
+			
+			NavigationView {
+				BookmarkTabView()
+			}
+			.tabItem { Label("Saved", systemImage: "bookmark.square") }
 		}
 	}
 }
