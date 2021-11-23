@@ -10,8 +10,16 @@ import SwiftUI
 // TODO: Documentation
 struct ArticleListView: View {
 	let articles: [Article]
+	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
 	
 	var body: some View {
+		rootView
+	}
+}
+
+
+extension ArticleListView {
+	private var listView: some View {
 		List {
 			ForEach(articles) { article in
 				ArticleRowView(article)
@@ -20,6 +28,35 @@ struct ArticleListView: View {
 			.listRowInsets(Constant.listInsets)
 		}
 		.listStyle(.plain)
+	}
+	
+	private var columns: [GridItem] {
+		[GridItem(.adaptive(minimum: 300), spacing: 8)]
+	}
+	
+	private var gridView: some View {
+		ScrollView {
+			LazyVGrid(columns: columns) {
+				ForEach(articles) { article in
+					ArticleRowView(article)
+						.frame(height: 360)
+						.background(Color(uiColor: .systemBackground))
+						.mask(RoundedRectangle(cornerRadius: 8))
+						.shadow(radius: 4)
+						.padding(.bottom, 4)
+				}
+			}
+			.padding()
+		}
+		.background(Color(uiColor: .secondarySystemGroupedBackground ))
+	}
+	
+	@ViewBuilder
+	private var rootView: some View {
+		switch horizontalSizeClass {
+			case .regular: gridView
+			default: listView
+		}
 	}
 }
 

@@ -12,55 +12,18 @@ struct ArticleRowView: View {
 	
 	/// Article model
 	let article: Article
+	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
+	
 	init(_ article: Article) { self.article = article }
 	
 	@EnvironmentObject var articleBookmarkVM: ArticleBookmarkViewModel
 	
 	var body: some View {
-		VStack(alignment: .leading, spacing: 20) {
-			AsyncImage(url: article.imageURL, transaction: Constant.imageTransaction) { asyncImagePhase in
-				switch asyncImagePhase {
-					case .success(let image):
-						image
-							.resizable()
-							.aspectRatio(contentMode: .fill)
-					case .failure:
-						FailureImageView()
-					case .empty:
-						EmptyImageView()
-					@unknown default:
-						EmptyView()
-				}
-			}
-			.frame(minHeight: 200, maxHeight: 300)
-			.background(.regularMaterial)
-			.clipped()
-		
-		// Article text and description
-		VStack(alignment: .leading, spacing: 8) {
-			// Uncomment if needed for open article in Safari
-			// Link(article.title, destination: article.articleURL)
-			Text(article.title)
-				.font(.headline)
-				.lineLimit(2)
-			Text(article.descriptionText)
-				.font(.subheadline)
-				.lineLimit(3)
-			
-			// Caption text and relative date with 2 button's
-			HStack(spacing: 14) {
-				Text(article.captionText)
-					.foregroundColor(.secondary)
-					.font(.caption)
-					.lineLimit(1)
-				
-				Spacer()
-				
-				bookmarkButton
-				sharingButton
-			}
-		}
-		.padding([.horizontal, .bottom])
+		switch horizontalSizeClass {
+			case .regular:
+				GeometryReader { contentRowView($0) }
+			default:
+				contentRowView()
 		}
 	}
 }
@@ -88,7 +51,7 @@ extension ArticleRowView {
 			Image(systemName: "square.and.arrow.up")
 		}
 		.buttonStyle(.bordered)
-
+		
 	}
 	
 	private func toggleBookmark(for article: Article) async {
@@ -109,6 +72,74 @@ extension ArticleRowView {
 			.rootViewController?
 			.present(activityVC, animated: true)
 		
+	}
+	
+	@ViewBuilder
+	private func contentRowView(_ proxy: GeometryProxy? = nil) -> some View {
+		VStack(alignment: .leading, spacing: 20) {
+			AsyncImage(url: article.imageURL, transaction: Constant.imageTransaction) { asyncImagePhase in
+				switch asyncImagePhase {
+					case .success(let image):
+						image
+							.resizable()
+							.aspectRatio(contentMode: .fill)
+					case .failure:
+						FailureImageView()
+					case .empty:
+						EmptyImageView()
+					@unknown default:
+						EmptyView()
+				}
+			}
+			.asyncImageFrame(sizeClass: horizontalSizeClass)
+			.background(.regularMaterial)
+			.clipped()
+			
+			// Article text and description
+			VStack(alignment: .leading, spacing: 8) {
+				// Uncomment if needed for open article in Safari
+				// Link(article.title, destination: article.articleURL)
+				Text(article.title)
+					.font(.headline)
+					.lineLimit(2)
+				Text(article.descriptionText)
+					.font(.subheadline)
+					.lineLimit(3)
+				
+				if horizontalSizeClass == .regular {
+					Spacer()
+				}
+				
+				// Caption text and relative date with 2 button's
+				HStack(spacing: 14) {
+					Text(article.captionText)
+						.foregroundColor(.secondary)
+						.font(.caption)
+						.lineLimit(1)
+					
+					Spacer()
+					
+					bookmarkButton
+					sharingButton
+				}
+			}
+			.padding([.horizontal, .bottom])
+		}
+	}
+}
+
+
+// TODO: Move to Extensions
+fileprivate extension View {
+	@ViewBuilder
+	func asyncImageFrame(sizeClass: UserInterfaceSizeClass? = .compact) -> some View {
+		switch sizeClass {
+			case .regular:
+				frame(height: 180)
+			default:
+				frame(minHeight: 200, maxHeight: 300)
+				
+		}
 	}
 }
 
