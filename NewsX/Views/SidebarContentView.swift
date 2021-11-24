@@ -10,11 +10,12 @@ import SwiftUI
 struct SidebarContentView: View {
 	
 	private let savedAndSearchMenu: [MenuItem] = [.saved, .search]
+	@State private var selectedMenu: MenuItem.ID? = MenuItem.category(.general).id
 	
 	
 	var body: some View {
 		NavigationView {
-			List {
+			List(selection: $selectedMenu) {
 				ForEach(savedAndSearchMenu) {
 					navigationLinkForMenuItem($0)
 				}
@@ -29,8 +30,6 @@ struct SidebarContentView: View {
 				.navigationTitle("News X")
 			}
 			.listStyle(.sidebar)
-			
-			NewsTabView()
 		}
 	}
 }
@@ -38,7 +37,7 @@ struct SidebarContentView: View {
 
 extension SidebarContentView {
 	private func navigationLinkForMenuItem(_ item: MenuItem) -> some View {
-		NavigationLink {
+		NavigationLink(tag: item.id, selection: $selectedMenu) {
 			viewForMenuItem(item)
 		} label: {
 			Label(item.text, systemImage: item.systemImage)

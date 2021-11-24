@@ -9,7 +9,11 @@ import SwiftUI
 
 // TODO: Documentation
 struct NewsTabView: View {
+	
+	@State private var angle: Double = 0
 	@StateObject var articleNewsVM: ArticleNewsViewModel
+	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
+
 	private var fetchTaskToken: FetchTaskToken {
 		articleNewsVM.fetchTaskToken
 	}
@@ -25,7 +29,7 @@ struct NewsTabView: View {
 			.refreshable(action: refreshTask)
 			.task(id: fetchTaskToken, loadArticles)
 			.navigationBarTitleDisplayMode(.inline)
-			.navigationBarItems(leading: leadingCategoryText, trailing: menu)
+			.navigationBarItems(leading: leadingCategoryText, trailing: navigationTrailingItem)
 	}
 }
 
@@ -71,7 +75,26 @@ extension NewsTabView {
 		Text(fetchTaskToken.category.text)
 	}
 	
-	private var menu: some View {
+	@ViewBuilder
+	private var navigationTrailingItem: some View {
+		switch horizontalSizeClass {
+			case .regular: refreshArticleButton
+			default: categoryMenu
+		}
+	}
+	
+	private var refreshArticleButton: some View {
+		Button {
+			refreshTask()
+			angle += 360
+		} label: {
+			Image(systemName: "arrow.counterclockwise")
+		}
+		.rotationEffect(.degrees(angle))
+		.animation(.spring(), value: angle)
+	}
+	
+	private var categoryMenu: some View {
 		Menu {
 			Picker("Category", selection: $articleNewsVM.fetchTaskToken.category) {
 				ForEach(Category.allCases) {

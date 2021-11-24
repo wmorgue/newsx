@@ -10,12 +10,13 @@ import SwiftUI
 // TODO: Documentation
 struct SearchTabView: View {
 	@StateObject var searchVM = ArticleSearchViewModel.shared
+	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
 	
 	var body: some View {
 		ArticleListView(articles: articles)
 			.overlay(searchOverlay)
 			.navigationTitle("Search")
-			.searchable(text: $searchVM.searchQuery, prompt: "Search article") { searchSuggestions }
+			.searchable(text: $searchVM.searchQuery, placement: searchFieldPlacement, prompt: "Search article") { searchSuggestions }
 			.onChange(of: searchVM.searchQuery) { query in
 				// If search cancelled by hit the button,
 				// set phase to empty and show EmptyPlaceholderView
@@ -62,6 +63,11 @@ extension SearchTabView {
 				RetryView(text: error.localizedDescription, retryAction: search)
 			default: EmptyView()
 		}
+	}
+	
+	// TODO: Documentation
+	private var searchFieldPlacement: SearchFieldPlacement {
+		horizontalSizeClass == .regular ? .navigationBarDrawer : .automatic
 	}
 	
 	// TODO: Documentation

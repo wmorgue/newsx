@@ -42,17 +42,16 @@ extension ArticleRowView {
 		.buttonStyle(.bordered)
 	}
 	
-	
-	/// Sharing button
-	private var sharingButton: some View {
+	/// Sharing button for article
+	private func sharingArticleButton(_ proxy: GeometryProxy? = nil) -> some View {
 		Button {
-			presentActionSheet(for: article.articleURL)
+			presentActionSheet(for: article.articleURL, proxy: proxy)
 		} label: {
 			Image(systemName: "square.and.arrow.up")
 		}
 		.buttonStyle(.bordered)
-		
 	}
+	
 	
 	private func toggleBookmark(for article: Article) async {
 		if articleBookmarkVM.isBookmarked(for: article) {
@@ -65,13 +64,19 @@ extension ArticleRowView {
 	/// Present share action sheet for SwiftUI
 	///
 	/// Call this method when `sharingButton` is tapped.
-	private func presentActionSheet(for url: URL) {
+	private func presentActionSheet(for url: URL, proxy: GeometryProxy? = nil) {
 		let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-		(UIApplication.shared.connectedScenes.first as? UIWindowScene)?
+		guard let rootVC = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?
 			.keyWindow?
-			.rootViewController?
-			.present(activityVC, animated: true)
+			.rootViewController else { return }
 		
+		activityVC.popoverPresentationController?.sourceView = rootVC.view
+
+		if let proxy = proxy {
+			activityVC.popoverPresentationController?.sourceRect = proxy.frame(in: .global)
+		}
+		
+		rootVC.present(activityVC, animated: true)
 	}
 	
 	@ViewBuilder
@@ -120,7 +125,7 @@ extension ArticleRowView {
 					Spacer()
 					
 					bookmarkButton
-					sharingButton
+					sharingArticleButton(proxy)
 				}
 			}
 			.padding([.horizontal, .bottom])
