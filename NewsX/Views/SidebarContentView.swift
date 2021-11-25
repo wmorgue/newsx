@@ -9,13 +9,23 @@ import SwiftUI
 
 struct SidebarContentView: View {
 	
+	@AppStorage("selected_item") private var selectedMenu: MenuItem.ID?
+	
 	private let savedAndSearchMenu: [MenuItem] = [.saved, .search]
-	@State private var selectedMenu: MenuItem.ID? = MenuItem.category(.general).id
+	private var selection: Binding<MenuItem.ID?> {
+		Binding {
+			selectedMenu ?? MenuItem.category(.general).id
+		} set: { newValue in
+			if let menuItem = newValue {
+				selectedMenu = menuItem
+			}
+		}
+	}
 	
 	
 	var body: some View {
 		NavigationView {
-			List(selection: $selectedMenu) {
+			List(selection: selection) {
 				ForEach(savedAndSearchMenu) {
 					navigationLinkForMenuItem($0)
 				}
@@ -37,7 +47,7 @@ struct SidebarContentView: View {
 
 extension SidebarContentView {
 	private func navigationLinkForMenuItem(_ item: MenuItem) -> some View {
-		NavigationLink(tag: item.id, selection: $selectedMenu) {
+		NavigationLink(tag: item.id, selection: selection) {
 			viewForMenuItem(item)
 		} label: {
 			Label(item.text, systemImage: item.systemImage)
@@ -50,7 +60,8 @@ extension SidebarContentView {
 		switch item {
 			case .saved: BookmarkTabView()
 			case .search: SearchTabView()
-			case .category(let category): NewsTabView(category: category)
+			case .category(let category):
+				NewsTabView(category: category)
 		}
 	}
 }
