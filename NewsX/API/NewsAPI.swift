@@ -30,10 +30,16 @@ struct NewsAPI {
 		try await fetchArticles(from: generateNewsURL(from: category))
 	}
 	
+	/// Search articles by query
+	/// - Parameter query: Text query request
+	/// - Returns: Array of articles
 	func search(for query: String) async throws -> [Article] {
 		try await fetchArticles(from: generateSearchURL(from: query))
 	}
 	
+	/// Fetch all articles
+	/// - Parameter url: Specified URL
+	/// - Returns: Array of articles
 	private func fetchArticles(from url: URL) async throws -> [Article] {
 		let (data, response) = try await session.data(from: url)
 		
@@ -57,6 +63,10 @@ struct NewsAPI {
 		}
 	}
 	
+	
+	/// Create a search URL
+	/// - Parameter query: Text query
+	/// - Returns: Search URL
 	private func generateSearchURL(from query: String) -> URL {
 		let percentEncodedgString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
 		

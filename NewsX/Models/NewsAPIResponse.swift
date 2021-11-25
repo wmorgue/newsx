@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// API Response that contains articles or code error and message
 struct NewsAPIResponse: Decodable {
 	let status: String
 	let totalResults: Int?

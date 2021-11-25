@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-// TODO: Documentation
+
+/// List that shows search history
 struct SearchHistoryListView: View {
 	@ObservedObject var searchVM: ArticleSearchViewModel
 	let onSubmit: (String) -> Void
@@ -25,13 +26,7 @@ struct SearchHistoryListView: View {
 				Button(history) {
 					onSubmit(history)
 				}
-				.swipeActions {
-					Button(role: .destructive) {
-						searchVM.removeHistory(history)
-					} label: {
-						Label("Delete", systemImage: "trash")
-					}
-				}
+				.swipeActions { removeHistorySwipe(history) }
 			}
 		}
 		.listStyle(.plain)
@@ -40,6 +35,7 @@ struct SearchHistoryListView: View {
 
 
 extension SearchHistoryListView {
+	/// Button that clear search history
 	private var removeAllHistoryButton: some View {
 		Button {
 			searchVM.removeAllHistory()
@@ -47,6 +43,15 @@ extension SearchHistoryListView {
 			Text("Clear")
 		}
 		.foregroundColor(.accentColor)
+	}
+	
+	/// Swipe that remove search history text
+	private func removeHistorySwipe(_ historyText: String) -> some View {
+		Button(role: .destructive) {
+			searchVM.removeHistory(historyText)
+		} label: {
+			Label("Delete", systemImage: "trash")
+		}
 	}
 }
 

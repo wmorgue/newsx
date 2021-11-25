@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+/// Sidebar view for landscape left or landscape right orientation.
 struct SidebarContentView: View {
 	
 	@AppStorage("selected_item") private var selectedMenu: MenuItem.ID?

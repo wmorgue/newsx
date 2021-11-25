@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// TODO: Documentation
+/// Main root view for Application
 struct MainView: View {
 	@Environment(\.horizontalSizeClass) var horizontalSizeClass
 	

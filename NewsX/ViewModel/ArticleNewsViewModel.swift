@@ -41,7 +41,7 @@ final class ArticleNewsViewModel {
 	
 	/// Async load articles with phase's
 	func loadArticles() async {
-// For development
+// Uncomment for development and comment below
 //		phase = .success(Article.previewData)
 		
 		if Task.isCancelled { return }

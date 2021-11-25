@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-// TODO: Documentation
+
+/// A view that shows the bookmark tab.
 struct BookmarkTabView: View {
 	@State private var searchText: String = ""
 	@EnvironmentObject var articleBookmarkVM: ArticleBookmarkViewModel
@@ -30,8 +31,6 @@ extension BookmarkTabView {
 			EmptyPlaceholderView(text: "No saved bookmarks") {
 				Image(systemName: "bookmark.slash")
 			}
-			// TODO: Под вопросом 🤔
-			//			.navigationBarHidden(true)
 		}
 	}
 	

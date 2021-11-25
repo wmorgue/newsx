@@ -1,9 +1,15 @@
 # NewsX API
 
-### Roadmap
+SwiftUI application that shows latest articles from `https://newsapi.org/`
 
-- [ ] Async/await, Actor features
-- [ ] Documentation to custom views
+## Application preview
+
+![NewsX preview](Preview.png)
+
+### SwiftUI 3
+
+- [x] Async/await, Actor features
+- [x] Documentation to custom views
 - [ ] Application icon
 - [ ] Localizing
 - [ ] CloudKit

@@ -15,7 +15,7 @@ struct Source {
 }
 
 
-/// Article model for API
+/// Article model for JSON
 struct Article {
 	let source: Source
 	let title: String

@@ -7,16 +7,23 @@
 
 import SwiftUI
 
-// TODO: Documentation
+
+/// Image and text that's showing when image can't loading
 struct FailureImageView: View {
+	
+	/// Text to display
+	let text: String = "Can't load the image."
+	/// System image name
+	let imageName: String = "photo.on.rectangle"
+	
 	var body: some View {
 		HStack {
 			Spacer()
 			VStack(spacing: 25) {
-				Image(systemName: "photo.on.rectangle")
+				Image(systemName: imageName)
 					.font(.title)
 					.imageScale(.large)
-				Text("Can't load the image.")
+				Text(text)
 					.foregroundColor(.gray)
 			}
 			Spacer()

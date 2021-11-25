@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-// TODO: Documentation
+
+/// A view that shows the search tab.
 struct SearchTabView: View {
 	@StateObject var searchVM = ArticleSearchViewModel.shared
 	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
@@ -30,7 +31,7 @@ struct SearchTabView: View {
 
 
 extension SearchTabView {
-	// TODO: Documentation
+	/// If fetch phase is success return article or empty
 	private var articles: [Article] {
 		if case .success(let article) = searchVM.dataFetchPhase {
 			return article
@@ -39,7 +40,7 @@ extension SearchTabView {
 		}
 	}
 	
-	// TODO: Documentation
+	/// Search overlay depends on fetch phase
 	@ViewBuilder
 	private var searchOverlay: some View {
 		switch searchVM.dataFetchPhase {
@@ -61,16 +62,17 @@ extension SearchTabView {
 				}
 			case .failure(let error):
 				RetryView(text: error.localizedDescription, retryAction: search)
-			default: EmptyView()
+			default:
+				EmptyView()
 		}
 	}
 	
-	// TODO: Documentation
+	/// Search field depend on device orientation
 	private var searchFieldPlacement: SearchFieldPlacement {
 		horizontalSizeClass == .regular ? .navigationBarDrawer : .automatic
 	}
 	
-	// TODO: Documentation
+	/// Search article by text and add it to history
 	private func search() {
 		let trimmedSearchQuery = searchVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
 		
@@ -81,7 +83,7 @@ extension SearchTabView {
 		}
 	}
 	
-	// TODO: Documentation
+	/// Suggestions for searching
 	@ViewBuilder
 	private var searchSuggestions: some View {
 		let keywords = ["Apple", "iOS 15", "Genshin Impact", "Elon Musk"]

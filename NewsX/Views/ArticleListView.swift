@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-// TODO: Documentation
+
+/// Article List for row's
 struct ArticleListView: View {
+	
+	/// Article array model
 	let articles: [Article]
 	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
 	
-	var body: some View {
-		rootView
-	}
+	var body: some View { rootView }
 }
 
 
 extension ArticleListView {
+	/// List for article row
 	private var listView: some View {
 		List {
 			ForEach(articles) { article in
@@ -30,10 +32,13 @@ extension ArticleListView {
 		.listStyle(.plain)
 	}
 	
+	/// Adaptive grid columns
 	private var columns: [GridItem] {
 		[GridItem(.adaptive(minimum: 300), spacing: 8)]
 	}
 	
+	
+	/// Grid view for regular size class
 	private var gridView: some View {
 		ScrollView {
 			LazyVGrid(columns: columns) {
@@ -51,6 +56,11 @@ extension ArticleListView {
 		.background(Color(uiColor: .secondarySystemGroupedBackground ))
 	}
 	
+	/// Root view for current Article List with 2 cases.
+	///
+	/// For regular size class showing `gridView`
+	/// 
+	/// For other cases showing `listView`
 	@ViewBuilder
 	private var rootView: some View {
 		switch horizontalSizeClass {

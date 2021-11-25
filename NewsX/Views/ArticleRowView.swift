@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-// TODO: Documentation
+
+/// Article Row that contain image, text, subtext, bookmark and share button.
 struct ArticleRowView: View {
 	
 	/// Article model
@@ -43,6 +44,8 @@ extension ArticleRowView {
 	}
 	
 	/// Sharing button for article
+	/// - Parameter proxy: A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
+	/// - Returns: Button with system image
 	private func sharingArticleButton(_ proxy: GeometryProxy? = nil) -> some View {
 		Button {
 			presentActionSheet(for: article.articleURL, proxy: proxy)
@@ -53,6 +56,9 @@ extension ArticleRowView {
 	}
 	
 	
+	
+	/// Remove or add bookmark to storage
+	/// - Parameter article: Article model
 	private func toggleBookmark(for article: Article) async {
 		if articleBookmarkVM.isBookmarked(for: article) {
 			await articleBookmarkVM.removeBookmark(for: article)
@@ -67,11 +73,11 @@ extension ArticleRowView {
 	private func presentActionSheet(for url: URL, proxy: GeometryProxy? = nil) {
 		let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
 		guard let rootVC = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?
-			.keyWindow?
-			.rootViewController else { return }
+						.keyWindow?
+						.rootViewController else { return }
 		
 		activityVC.popoverPresentationController?.sourceView = rootVC.view
-
+		
 		if let proxy = proxy {
 			activityVC.popoverPresentationController?.sourceRect = proxy.frame(in: .global)
 		}
@@ -79,6 +85,9 @@ extension ArticleRowView {
 		rootVC.present(activityVC, animated: true)
 	}
 	
+	/// Represent image, title, subtitle, date and buttons to current ArticleRowView
+	/// - Parameter proxy: A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
+	/// - Returns: Article row content
 	@ViewBuilder
 	private func contentRowView(_ proxy: GeometryProxy? = nil) -> some View {
 		VStack(alignment: .leading, spacing: 20) {
@@ -134,8 +143,10 @@ extension ArticleRowView {
 }
 
 
-// TODO: Move to Extensions
 fileprivate extension View {
+	/// Return frame for async image with current Interface Size Class
+	/// - Parameter sizeClass: A set of values that indicate the visual size available to the view.
+	/// - Returns: Frame for regular and default size class
 	@ViewBuilder
 	func asyncImageFrame(sizeClass: UserInterfaceSizeClass? = .compact) -> some View {
 		switch sizeClass {

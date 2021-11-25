@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+
+/// Actor data store
 protocol DataStore: Actor {
 	associatedtype D
 	
@@ -14,9 +17,11 @@ protocol DataStore: Actor {
 	func load() -> D?
 }
 
+
+/// Local `.plist`  data store  for Model
 actor PlistDataStore<T: Codable>: DataStore where T: Equatable {
-	private var saved: T?
 	let filename: String
+	private var saved: T?
 	
 	init(filename: String) {
 		self.filename = filename
@@ -29,6 +34,9 @@ actor PlistDataStore<T: Codable>: DataStore where T: Equatable {
 			.appendingPathComponent("\(filename).plist")
 	}
 	
+	
+	/// Save current generic object to local storage
+	/// - Parameter current: Current model
 	func save(_ current: T) {
 		if let saved = self.saved, saved == current {
 			return
@@ -47,6 +55,8 @@ actor PlistDataStore<T: Codable>: DataStore where T: Equatable {
 		}
 	}
 	
+	/// Load a `.plist` from local storage
+	/// - Returns: `.plist` data or nil
 	func load() -> T? {
 		do {
 			let data = try Data(contentsOf: dataURL)

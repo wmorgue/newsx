@@ -33,6 +33,7 @@ enum MenuItem: CaseIterable {
 		}
 	}
 	
+	/// allCases iterable for MenuItem
 	static var allCases: [MenuItem] {
 		return [.saved, .search] + Category.menuItems
 	}

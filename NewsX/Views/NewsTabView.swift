@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-// TODO: Documentation
+/// A view that shows the article news.
 struct NewsTabView: View {
 	
 	@State private var angle: Double = 0
 	@StateObject var articleNewsVM: ArticleNewsViewModel
 	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
-
+	
 	private var fetchTaskToken: FetchTaskToken {
 		articleNewsVM.fetchTaskToken
 	}
@@ -35,6 +35,9 @@ struct NewsTabView: View {
 
 
 extension NewsTabView {
+	/// Overlay for current view depens on fetch phase
+	///
+	/// By default — `EmptyView`.
 	@ViewBuilder
 	private var overlayView: some View {
 		switch articleNewsVM.phase {
@@ -42,7 +45,7 @@ extension NewsTabView {
 				ProgressView()
 			case .success(let result) where result.isEmpty:
 				EmptyPlaceholderView(text: "No Articles") {
-					nil
+					Image(systemName: "binoculars")
 				}
 			case .failure(let error):
 				RetryView(text: error.localizedDescription, retryAction: refreshTask)
@@ -51,6 +54,7 @@ extension NewsTabView {
 		}
 	}
 	
+	/// Return article if phase is success or empty array
 	private var articles: [Article] {
 		if case let .success(articles) = articleNewsVM.phase {
 			return articles
@@ -59,6 +63,7 @@ extension NewsTabView {
 		}
 	}
 	
+	/// Load articles
 	@Sendable
 	private func loadArticles() async {
 		await articleNewsVM.loadArticles()
@@ -71,6 +76,8 @@ extension NewsTabView {
 		}
 	}
 	
+	
+	/// Category text by leading
 	private var leadingCategoryText: Text {
 		Text(fetchTaskToken.category.text)
 	}
@@ -83,6 +90,7 @@ extension NewsTabView {
 		}
 	}
 	
+	/// Refresh button
 	private var refreshArticleButton: some View {
 		Button {
 			refreshTask()
@@ -94,6 +102,7 @@ extension NewsTabView {
 		.animation(.spring(), value: angle)
 	}
 	
+	/// Menu with category
 	private var categoryMenu: some View {
 		Menu {
 			Picker("Category", selection: $articleNewsVM.fetchTaskToken.category) {

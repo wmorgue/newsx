@@ -7,7 +7,8 @@
 
 import Foundation
 
-// TODO: Documantation
+
+/// Menu item for tab view
 enum TabMenuItem: String {
 	case news
 	case search

@@ -8,12 +8,14 @@
 import SwiftUI
 
 
-// TODO: Documentation
+
+/// View model for search
 @MainActor
 final class ArticleSearchViewModel {
 	
 	static let shared = ArticleSearchViewModel()
 	
+	/// Load history when VM is init
 	private init() {
 		loadHistory()
 	}
@@ -29,6 +31,9 @@ final class ArticleSearchViewModel {
 		searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
 	
+	
+	/// Added a text to history and update storage
+	/// - Parameter text: Text query
 	func addHistory(_ text: String) {
 		guard history.count != historyLimit else {
 			history.removeLast()
@@ -43,23 +48,30 @@ final class ArticleSearchViewModel {
 		updateHistory()
 	}
 	
+	
+	/// Remove text from history storage
+	/// - Parameter text: Text query
 	func removeHistory(_ text: String) {
 		guard let index = history.firstIndex(where: { text.lowercased() == $0.lowercased() }) else { return }
 		history.remove(at: index)
 		updateHistory()
 	}
 	
+	
+	/// Clean up all search history
 	func removeAllHistory() {
 		history.removeAll()
 		updateHistory()
 	}
 	
+	/// Load history from `historyDataStore` data store or return empty storage
 	private func loadHistory() {
 		Task {
 			history = await historyDataStore.load() ?? []
 		}
 	}
 	
+	/// Save search history from array
 	private func updateHistory() {
 		let currentHistory = self.history
 		Task {
@@ -67,6 +79,8 @@ final class ArticleSearchViewModel {
 		}
 	}
 	
+	
+	/// Search articles by input query
 	func searchArticle() async {
 		guard !Task.isCancelled else { return }
 		dataFetchPhase = .empty

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// TODO: Documentation
+/// Show progress bar with nothing.
 struct EmptyImageView: View {
 	var body: some View {
 		HStack {

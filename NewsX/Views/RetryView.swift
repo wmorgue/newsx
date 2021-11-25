@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-// TODO: Add documentation
+
+/// A view that shows when articles can't load success
 struct RetryView: View {
+	/// Text to dispay
 	let text: String
+	/// Async closure action
 	let retryAction: () async -> Void
 	
 	var body: some View {
