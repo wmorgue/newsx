@@ -48,7 +48,7 @@ extension BookmarkTabView {
 }
 
 struct BookmarkTabView_Previews: PreviewProvider {
-	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel.shared
+	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel()
 	
 	static var previews: some View {
 		BookmarkTabView()
