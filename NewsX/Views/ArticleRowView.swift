@@ -160,7 +160,7 @@ fileprivate extension View {
 }
 
 struct ArticleRowView_Previews: PreviewProvider {
-	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel.shared
+	@StateObject static var articleBookmarkVM = ArticleBookmarkViewModel()
 	
 	static var previews: some View {
 		NavigationView {

@@ -12,11 +12,9 @@ import SwiftUI
 /// View model for search
 @MainActor
 final class ArticleSearchViewModel {
-	
-	static let shared = ArticleSearchViewModel()
-	
+		
 	/// Load history when VM is init
-	private init() {
+	init() {
 		loadHistory()
 	}
 	
@@ -25,7 +23,7 @@ final class ArticleSearchViewModel {
 	@Published var dataFetchPhase: DataFetchPhase<[Article]> = .empty
 	
 	private let historyLimit = 10
-	private var newsAPI = NewsAPI.shared
+	private var newsAPI = NewsAPI()
 	private var historyDataStore = PlistDataStore<[String]>(filename: "search history")
 	private var trimmedSearchQuery: String {
 		searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)

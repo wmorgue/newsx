@@ -9,9 +9,6 @@ import Foundation
 
 
 struct NewsAPI {
-	private init() {}
-	/// Singleton
-	static let shared: NewsAPI = .init()
 
 	/// Shared URL session
 	private let session = URLSession.shared

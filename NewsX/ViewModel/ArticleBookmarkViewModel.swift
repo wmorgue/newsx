@@ -11,15 +11,13 @@ import SwiftUI
 /// View model bookmarks for article
 @MainActor
 final class ArticleBookmarkViewModel {
-	/// Singleton
-	static let shared = ArticleBookmarkViewModel()
 	/// Default empty array
 	@Published private(set) var bookmarks: [Article] = []
 	
 	private let bookmarkStore = PlistDataStore<[Article]>(filename: "bookmarks")
 	
 	
-	private init() {
+    init() {
 		Task { await load() }
 	}
 	

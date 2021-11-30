@@ -25,7 +25,7 @@ struct FetchTaskToken: Equatable {
 /// View model news for article
 @MainActor
 final class ArticleNewsViewModel {
-	private let newsAPI = NewsAPI.shared
+	private let newsAPI = NewsAPI()
 	
 	@Published var fetchTaskToken: FetchTaskToken
 	@Published var phase = DataFetchPhase<[Article]>.empty

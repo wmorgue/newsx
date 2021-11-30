@@ -10,7 +10,7 @@ import SwiftUI
 
 /// A view that shows the search tab.
 struct SearchTabView: View {
-	@StateObject var searchVM = ArticleSearchViewModel.shared
+	@StateObject var searchVM = ArticleSearchViewModel()
 	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
 	
 	var body: some View {
@@ -100,7 +100,7 @@ extension SearchTabView {
 
 
 struct SearchTabView_Previews: PreviewProvider {
-	@StateObject static var bookmarkVM = ArticleBookmarkViewModel.shared
+	@StateObject static var bookmarkVM = ArticleBookmarkViewModel()
 	
 	static var previews: some View {
 		SearchTabView()
